@@ -9,6 +9,31 @@
   --background1-dark: #242424;
   --background2-dark: #141414;
   --background3-dark: #282828;
+  --color2: #9B5377;
+}
+
+.cardcontainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 600ms ease-in-out;
+}
+.cardfront, .cardback{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; 
+  top: 0%;
+  background: transparent;
+  cursor: pointer;
+}
+.cardback{
+  color: var(--color2);
+  transform: rotateY(180deg);
+  display: flex; 
+  flex-direction: column;
+  justify-content:space-evenly;
 }
 
 @theme inline {
@@ -36,4 +61,5 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: 500ms ease-in-out;
 }
