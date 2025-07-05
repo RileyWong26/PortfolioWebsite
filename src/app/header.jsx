@@ -1,23 +1,100 @@
+'use client';
 import Image from "next/image";
-import Script from "next/script";
+import Link from "next/link";
+import React, {useState, useEffect} from "react";
 
 export default function Header() {
+    // Theme
+    const [theme, setTheme] = useState("Light");
 
-    function script(){
-        document.getElementById("HeaderHome").addEventListener("mouseover", function(){
-            self.classlist.toggle("rotate-x-180");
-        });
-        document.getElementById("HeaderHome").addEventListener("mouseout", function(){
-            self.classlist.toggle("rotate-x-180");
-        });
-    };
+    // Image States
+    const [Logo, setLogo] = useState("/LightMode/RLogoLight.webp");
+    const [Home, setHome] = useState("/LightMode/HomeLight.webp");
+    const [About, setAbout] = useState("/LightMode/AboutLight.webp");
+    const [Experience, setExperience] = useState("/LightMode/ExperienceLight.webp");
+    const [Projects, setProjects] = useState("/LightMode/ProjectsLight.webp");
+    const [Contact, setContact] = useState("/LightMode/MailLight.webp");
+    const [Resume, setResume] = useState("/LightMode/AttachLight.webp");
+    const [GitHub, setGitHub] = useState("/LightMode/GitHubLight.webp");
+    const [LinkedIn, setLinkedIn] = useState("/LightMode/LinkedInLight.webp");
+    const [ItchIo, setItchIo] = useState("/LightMode/ItchIoLight.webp");
+    const [Mode, setMode] = useState("/LightMode/DarkMode.webp");
+    const [ModeColor, setModeColor] = useState("/LightMode/DarkMode.webp");
+ 
+    const switchTheme = (newTheme) => { 
+        console.log("Switching theme");
 
-    var image1 = "/LightMode/RLogoLight.webp";
+        setLogo(`/${newTheme}Mode/RLogo${newTheme}.webp`);
+        setHome(`/${newTheme}Mode/Home${newTheme}.webp`);
+        setAbout(`/${newTheme}Mode/About${newTheme}.webp`);
+        setExperience(`/${newTheme}Mode/Experience${newTheme}.webp`);
+        setExperience(`/${newTheme}Mode/Experience${newTheme}.webp`);
+        setProjects(`/${newTheme}Mode/Projects${newTheme}.webp`);
+        setContact(`/${newTheme}Mode/Mail${newTheme}.webp`);
+        setResume(`/${newTheme}Mode/Resume${newTheme}.webp`);
+        setGitHub(`/${newTheme}Mode/GitHub${newTheme}.webp`);
+        setLinkedIn(`/${newTheme}Mode/LinkedIn${newTheme}.webp`);
+        setItchIo(`/${newTheme}Mode/ItchIo${newTheme}.webp`);
+        setMode(`/${newTheme}Mode/${newTheme}Mode.webp`);
+        
+        setTheme(newTheme);
+        localStorage.theme = newTheme;
+
+        if (newTheme === "Dark"){
+            document.documentElement.classList.toggle("dark");
+        }
+
+    }
+
+    // Inital load useEffect
+    useEffect(() => {
+        var newTheme = theme;
+
+        if (theme != localStorage.theme || (!("theme" in localStorage) && window.matchMedia("prefers-color-scheme: dark").matches )){
+            theme === "Light" ? newTheme = "Dark" : newTheme = "Light"; 
+            switchTheme(newTheme);
+        }
+
+        const section = window.location.pathname.split("/")[1];
+
+        
+
+        if (section === "") {
+            document.getElementById("HeaderHome").classList.add("bg-background3", "dark:bg-background3-dark");
+            setHome(`/${newTheme}Mode/Home2${newTheme}.webp`);
+        }
+        else if (section === "About") {
+            document.getElementById("HeaderAbout").classList.add("bg-background3", "dark:bg-background3-dark");
+            setAbout(`/${newTheme}Mode/About2${newTheme}.webp`);
+
+        }
+        else if (section === "Experience") {
+            document.getElementById("HeaderExperience").classList.add("bg-background3", "dark:bg-background3-dark");
+            setExperience(`/${newTheme}Mode/Experience2${newTheme}.webp`);
+
+        }
+        else if (section === "Projects") {
+            document.getElementById("HeaderProjects").classList.add("bg-background3", "dark:bg-background3-dark");
+            setProjects(`/${newTheme}Mode/Projects2${newTheme}.webp`);
+
+        }
+        else if (section === "Contact") {
+            document.getElementById("HeaderContact").classList.add("bg-background3", "dark:bg-background3-dark");
+            setContact(`/${newTheme}Mode/Mail2${newTheme}.webp`);
+
+        }
+
+        
+
+    }, []);
+
+
     return (
-        <div className="bg-background2 h-screen w-28 text-center flex flex-col justify-between ">
-            <div className=" ">
+        <div className="bg-background2 h-screen w-28 text-center flex flex-col justify-between dark:bg-background2-dark">
+            
+            <div className="">
                 <Image 
-                    src={image1} 
+                    src={Logo} 
                     className ="m-auto"
                     width="100" height="100"
                     alt="Logo"/>
@@ -26,51 +103,54 @@ export default function Header() {
 
             <div className="w-full  flex flex-col">
                 <div className="w-full h-[50px]  content-center 
-                    perspective-distant"
+                    perspective-distant group"
                     id="HeaderHome"> 
-                    <div className="cardcontainer">
-                        <div className="cardfront">
+                    
+                    <div className="cardcontainer group-hover:rotate-y-180 ">
+                        <div className="cardfront ">
+                            <Link className="absolute w-full h-full"href="/" />
                             <Image
                                 className="m-auto"
-                                src="/LightMode/HomeLight.webp"
+                                src={Home}
                                 width="50" height="50"
                                 alt="Home"
                                 id="HeaderHomeImg"/>
-                            <Image
-                                className="m-auto hidden"
-                                src="/LightMode/Home2Light.webp"
-                                width="50" height="50"
-                                alt="Home"
-                                id="HeaderHomeImg2"/>
+                            
                         </div>
                         <div className="cardback"> 
+                            <Link className="absolute w-full h-full"href="/" />
                             HOME
                         </div>
                     </div>
                 </div>
-                <div className="w-full h-[50px] content-center perspective-distant"
-                    id="Header"> 
-                    <div className="cardcontainer">
+                <div className="w-full h-[50px] content-center perspective-distant group"
+                    id="HeaderAbout"> 
+                    
+                    <div className="cardcontainer group-hover:rotate-y-180">
                         <div className="cardfront">
+                            <Link className="absolute w-full h-full"href="/About" />
                             <Image
                                 className="m-auto"
-                                src="/LightMode/PersonLight.webp"
+                                src={About}
                                 width="50" height="50"
                                 alt="About Me"
                                 id="HeaderAboutImg"/>
+                        
                         </div>
                         <div className="cardback">
+                            <Link className="absolute w-full h-full"href="/About" />
                             ABOUT
                         </div>
                     </div>
+                    
                 </div>
-                <div className="w-full h-[50px] content-center perspective-distant"
-                    id="Header"> 
-                    <div className="cardcontainer">
+                <div className="w-full h-[50px] content-center perspective-distant group"
+                    id="HeaderExperience"> 
+                    <div className="cardcontainer group-hover:rotate-y-180">
                         <div className="cardfront">
                             <Image
                                 className="m-auto"
-                                src="/LightMode/BusinessLight.webp"
+                                src={Experience}
                                 width="50" height="50"
                                 alt="Experience"
                                 id="HeaderExperienceImg"/>
@@ -80,13 +160,13 @@ export default function Header() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full h-[50px] content-center perspective-distant" 
-                    id="Header">
-                <div className="cardcontainer">
+                <div className="w-full h-[50px] content-center perspective-distant group" 
+                    id="HeaderProjects">
+                <div className="cardcontainer group-hover:rotate-y-180">
                         <div className="cardfront">
                             <Image
                                 className="m-auto"
-                                src="/LightMode/ProjectsLight.webp"
+                                src={Projects}
                                 width="50" height="50"
                                 alt="Projects"
                                 id="HeaderProjectsImg"/>
@@ -96,13 +176,13 @@ export default function Header() {
                         </div>
                     </div> 
                 </div>
-                <div className="w-full h-[50px] content-center perspective-distant"
-                    id="Header"> 
-                    <div className="cardcontainer">
+                <div className="w-full h-[50px] content-center perspective-distant group"
+                    id="HeaderContact"> 
+                    <div className="cardcontainer group-hover:rotate-y-180">
                         <div className="cardfront">
                             <Image
                                 className="m-auto"
-                                src="/LightMode/MailLight.webp"
+                                src={Contact}
                                 width="50" height="50"
                                 alt="Contact"
                                 id="HeaderContactImg"/>
@@ -123,13 +203,13 @@ export default function Header() {
                             className="m-auto"
                             src="/ResumeColor.webp"
                             width="25" height="25"
-                            alt="Resume"/>
+                            alt="ResumeColor"/>
                     </div>
                     <div className="absolute w-full h-full group-hover:opacity-0 
                         transition-opacity duration-100 ease-in-out">
                         <Image 
                             className="m-auto"
-                            src="/LightMode/AttachLight.webp"
+                            src={Resume}
                             width="25" height="25"
                             alt="Resume"/>
                     </div>
@@ -141,15 +221,15 @@ export default function Header() {
                             className="m-auto"
                             src="/GitHubColor.webp"
                             width="25" height="25"
-                            alt="Resume"/>
+                            alt="GitHubColor"/>
                     </div>
                     <div className="absolute w-full h-full group-hover:opacity-0 
                         transition-opacity duration-100 ease-in-out">
                         <Image 
                             className="m-auto"
-                            src="/LightMode/GitHubLight.webp"
+                            src={GitHub}
                             width="25" height="25"
-                            alt="Resume"/>
+                            alt="GitHub"/>
                     </div>
                 </div>
                 <div className="w-full h-[25px] relative group cursor-pointer">
@@ -159,15 +239,15 @@ export default function Header() {
                             className="m-auto"
                             src="/LinkedInColor.webp"
                             width="25" height="25"
-                            alt="Resume"/>
+                            alt="LinkedInColor"/>
                     </div>
                     <div className="absolute w-full h-full group-hover:opacity-0 
                         transition-opacity duration-100 ease-in-out">
                         <Image 
                             className="m-auto"
-                            src="/LightMode/LinkedInLight.webp"
+                            src={LinkedIn}
                             width="25" height="25"
-                            alt="Resume"/>
+                            alt="LinkedIn"/>
                     </div>
             </div>
             <div className="w-full h-[25px] relative group cursor-pointer">
@@ -177,38 +257,38 @@ export default function Header() {
                             className="m-auto"
                             src="/ItchIoColor.webp"
                             width="25" height="25"
-                            alt="Resume"/>
+                            alt="ItchIoColor"/>
                     </div>
                     <div className="absolute w-full h-full group-hover:opacity-0 
                         transition-opacity duration-100 ease-in-out">
                         <Image 
                             className="m-auto"
-                            src="/LightMode/ItchIoLight.webp"
+                            src={ItchIo}
                             width="25" height="25"
-                            alt="Resume"/>
+                            alt="ItchIo"/>
                     </div>
                 </div>
-                <div className="w-full h-[40px] relative group cursor-pointer">
+                <div className="w-full h-[40px] relative group cursor-pointer"
+                    id="HeaderTheme">
                     <div className="absolute w-full h-full opacity-0 group-hover:opacity-100 
                         transition-opacity duration-300 ease-in-out">
                         <Image 
                             className="m-auto"
-                            src="/DarkModeColor.webp"
+                            src={ModeColor}
                             width="40" height="40"
-                            alt="Resume"/>
+                            alt="ThemeColor"/>
                     </div>
                     <div className="absolute w-full h-full group-hover:opacity-0 
                         transition-opacity duration-100 ease-in-out">
                         <Image 
                             className="m-auto"
-                            src="/LightMode/DarkMode.webp"
+                            src={Mode}
                             width="40" height="40"
-                            alt="Resume"/>
+                            alt="Theme"/>
                     </div>
 
                 </div>
             </div>
-            <Script src="/Scripts/headerscript.js" />
         </div>
     )
 }
