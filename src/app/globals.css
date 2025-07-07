@@ -1,15 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
 
   --background1: #ffffff;
   --background2: #efefef;
   --background3: #d9d9d9;
-  --background1-dark: #242424;
-  --background2-dark: #141414;
-  --background3-dark: #282828;
+  --background1dark: #242424;
+  --background2dark: #141414;
+  --background3dark: #282828;
   --color2: #9B5377;
+  --textcolor2: #7e7e7e;
+  --textcolor2dark: #ababab;
+
 }
 
 .cardcontainer {
@@ -35,19 +39,70 @@
   flex-direction: column;
   justify-content:space-evenly;
 }
+.glitchText{
+  text-shadow:
+    0.05em 0.05em 0.025em rgba(255, 0, 0),
+    -0.05em 0.05em 0.025em rgba(0, 255, 0),
+    0 0.05em 0.025em rgba(0, 0, 255);
+  animation: glitch 3s infinite;
+}
+@keyframes glitch{
+  0%{
+    text-shadow:0.05em 0.05em 0.025em rgba(255, 0, 0),
+    -0.05em 0.05em 0.025em rgba(0, 255, 0),
+    0 0.05em 0.025em rgba(0, 0, 255);
+  }
+  25%{
+    text-shadow:-0.05em 0.03em 0.025em rgba(255, 0, 0),
+    0.05em 0.03em 0.025em rgba(0, 255, 0),
+    0 0.03em 0.025em rgba(0, 0, 255);
+  }
+  50%{
+    text-shadow:0.05em 0.01em 0.025em rgba(255, 0, 0),
+    -0.05em 0.01em 0.025em rgba(0, 255, 0),
+    0 0.05em 0.025em rgba(0, 0, 255);
+  }
+  75%{
+    text-shadow:-0.05em -0.01em 0.025em rgba(255, 0, 0),
+    0.05em -0.01em 0.025em rgba(0, 255, 0),
+    0 -0.01em 0.025em rgba(0, 0, 255);
+  }
+  100%{
+    text-shadow:0.05em -0.025em 0.025em rgba(255, 0, 0),
+    -0.05em -0.025em 0.025em rgba(0, 255, 0),
+    0 -0.025em 0.025em rgba(0, 0, 255);
+  }
+  
+}
+@keyframes appearUp{
+  0%{
+    opacity: 0%;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity:100%;
+    transform: translateY(0px);
+  }
+}
 
 @theme inline {
   --color-background1: var(--background1);
   --color-background2: var(--background2);
   --color-background3: var(--background3);
-  --color-background3-dark: var(--background3-dark);
-  --color-background2-dark: var(--background2-dark);
-  --color-background1-dark: var(--background1-dark);
+  --color-background3dark: var(--background3dark);
+  --color-background2dark: var(--background2dark);
+  --color-background1dark: var(--background1dark);
+  --color-hightlight : var(--color2);
   
   --font-Anonymous: var(--font-Anonymous);
+  --color-text2: var(--textcolor2);
+  --color-text2dark: var(--textcolor2dark);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --animate-pullup: appearUp 1s ease-in-out;
+  --animate-glitchtext: glitch 3s infinite;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,5 +116,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  transition: 500ms ease-in-out;
 }
