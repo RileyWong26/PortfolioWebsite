@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, {useState, useEffect} from "react";
 
+
 export default function Header() {
     // Theme
     const [theme, setTheme] = useState("Light");
@@ -101,13 +102,13 @@ export default function Header() {
             </div>
 
             <div className="w-full  flex flex-col">
-                <div className="w-full h-[50px]  content-center 
-                    perspective-distant group transition-colors duration-1000 ease-in-out"
+                <Link className="w-full h-[50px]  content-center 
+                    perspective-distant group transition-colors duration-1000 ease-in-out" href="/"
                     id="HeaderHome"> 
-                    
+
                     <div className="cardcontainer group-hover:rotate-y-180 ">
-                        <div className="cardfront ">
-                            <Link className="absolute w-full h-full"href="/" />
+                        <div className="cardfront">
+                            
                             <Image
                                 className="m-auto"
                                 src={Home}
@@ -117,18 +118,18 @@ export default function Header() {
                             
                         </div>
                         <div className="cardback"> 
-                            <Link className="absolute w-full h-full"href="/" />
                             HOME
                         </div>
                     </div>
-                </div>
-                <div className="w-full h-[50px] content-center perspective-distant group
-                    transition-colors duration-1000 ease-in-out"
+                </Link>
+                <Link className="w-full h-[50px] content-center perspective-distant group
+                    transition-colors duration-1000 ease-in-out" 
+                    href="/About"
                     id="HeaderAbout"> 
                     
                     <div className="cardcontainer group-hover:rotate-y-180">
                         <div className="cardfront">
-                            <Link className="absolute w-full h-full"href="/About" />
+                        
                             <Image
                                 className="m-auto"
                                 src={About}
@@ -138,18 +139,16 @@ export default function Header() {
                         
                         </div>
                         <div className="cardback">
-                            <Link className="absolute w-full h-full"href="/About" />
                             ABOUT
                         </div>
                     </div>
-                    
-                </div>
-                <div className="w-full h-[50px] content-center perspective-distant group
-                    transition-colors duration-1000 ease-in-out"
+                </Link>
+                <Link className="w-full h-[50px] content-center perspective-distant group
+                    transition-colors duration-1000 ease-in-out" 
+                    href="/Experience"
                     id="HeaderExperience"> 
                     <div className="cardcontainer group-hover:rotate-y-180">
                         <div className="cardfront">
-                            <Link className="absolute w-full h-full"href="/Experience" />
                             <Image
                                 className="m-auto"
                                 src={Experience}
@@ -158,17 +157,16 @@ export default function Header() {
                                 id="HeaderExperienceImg"/>
                         </div>
                         <div className="cardback">
-                            <Link className="absolute w-full h-full"href="/Experience" />
                             EXPERIENCE
                         </div>
                     </div>
-                </div>
-                <div className="w-full h-[50px] content-center perspective-distant group
+                </Link>
+                <Link className="w-full h-[50px] content-center perspective-distant group
                     transition-colors duration-1000 ease-in-out" 
+                    href="/Projects"
                     id="HeaderProjects">
-                <div className="cardcontainer group-hover:rotate-y-180">
+                    <div className="cardcontainer group-hover:rotate-y-180">
                         <div className="cardfront">
-                            <Link className="absolute w-full h-full"href="/Projects" />
                             <Image
                                 className="m-auto"
                                 src={Projects}
@@ -177,17 +175,16 @@ export default function Header() {
                                 id="HeaderProjectsImg"/>
                         </div>
                         <div className="cardback">
-                            <Link className="absolute w-full h-full"href="/Projects" />
                             PROJECTS
                         </div>
                     </div> 
-                </div>
-                <div className="w-full h-[50px] content-center perspective-distant group
+                </Link>
+                <Link className="w-full h-[50px] content-center perspective-distant group
                     transition-colors duration-1000 ease-in-out"
+                    href="/Contact"
                     id="HeaderContact"> 
                     <div className="cardcontainer group-hover:rotate-y-180">
                         <div className="cardfront">
-                            <Link className="absolute w-full h-full"href="/Contact" />
                             <Image
                                 className="m-auto"
                                 src={Contact}
@@ -196,11 +193,10 @@ export default function Header() {
                                 id="HeaderContactImg"/>
                         </div>
                         <div className="cardback">
-                            <Link className="absolute w-full h-full"href="/Contact" />
                             CONTACT
                         </div>
                     </div>
-                </div>
+                </Link>
             </div>
 
             <div className="w-full flex flex-col space-y-3 space">
