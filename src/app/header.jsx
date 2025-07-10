@@ -90,7 +90,7 @@ export default function Header() {
 
 
     return (
-        <div className="bg-background2 h-screen w-28 text-center flex flex-col justify-between dark:bg-background2dark transition-colors duration-1000 ease-in-out">
+        <div className="bg-background2 h-screen w-28 text-center flex flex-col justify-between  transition-colors duration-1000 ease-in-out sticky top-0">
             
             <div className="">
                 <Image 
