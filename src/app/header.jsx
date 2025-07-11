@@ -90,116 +90,131 @@ export default function Header() {
 
 
     return (
-        <div className="bg-background2 h-screen w-28 text-center flex flex-col justify-between  transition-colors duration-1000 ease-in-out sticky top-0">
-            
-            <div className="">
+        <div className=" absolute bg-background2 h-screen w-screen xl:w-28 text-center flex flex-col justify-between 
+            transition-all duration-1000 ease-in-out xl:sticky top-0 -translate-y-full xl:translate-y-0"
+            id="Header">
+            <div className="w-full opacity-0 h-[10vh] xl:opacity-100">
                 <Image 
                     src={Logo} 
                     className ="m-auto"
                     width="100" height="100"
-                    alt="Logo"/>
-                <h1 className="m-auto font-bold text-xs text-black dark:text-white transition-colors duration-1000 ease-in-out">Riley</h1>
+                    alt="Logo"
+                    quality={100}/>
+                <h1 className="m-auto font-bold text-xs text-primary transition-colors duration-1000 ease-in-out">
+                    Riley
+                </h1>
             </div>
 
-            <div className="w-full  flex flex-col">
-                <Link className="w-full h-[50px]  content-center 
+            <div className="w-full h-2/3 xl:h-auto flex flex-col">
+                <Link className="w-full h-1/5 xl:h-[50px] content-center p-4 xl:p-0
                     perspective-distant group transition-colors duration-1000 ease-in-out" href="/"
                     id="HeaderHome"> 
-
-                    <div className="cardcontainer group-hover:rotate-y-180 ">
-                        <div className="cardfront">
-                            
+                    <div className="h-full w-full flex flex-row space-x-4 
+                        xl:relative xl:transform-3d xl:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
+                        <div className="h-full w-1/3 xl:w-full xl:absolute xl:backface-hidden ">
                             <Image
-                                className="m-auto"
+                                className="m-auto h-full w-auto"
                                 src={Home}
-                                width="50" height="50"
+                                width={0} height={0}
                                 alt="Home"
-                                id="HeaderHomeImg"/>
-                            
+                                id="HeaderHomeImg"
+                                quality={100}/>
                         </div>
-                        <div className="cardback"> 
+                        <div className="content-center text-hightlight text-2xl xl:w-full 
+                            xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base"> 
                             HOME
                         </div>
                     </div>
                 </Link>
-                <Link className="w-full h-[50px] content-center perspective-distant group
+                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-0
                     transition-colors duration-1000 ease-in-out" 
                     href="/About"
                     id="HeaderAbout"> 
-                    
-                    <div className="cardcontainer group-hover:rotate-y-180">
-                        <div className="cardfront">
+                    <div className="h-full w-full flex flex-row space-x-4 
+                        xl:relative xl:transform-3d xl:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
+                        <div className="h-full w-1/3 xl:w-full xl:absolute xl:backface-hidden ">
                         
                             <Image
-                                className="m-auto"
+                                className="m-auto h-full w-auto"
                                 src={About}
-                                width="50" height="50"
+                                width={0} height={0}
                                 alt="About Me"
-                                id="HeaderAboutImg"/>
+                                id="HeaderAboutImg"
+                                quality={100}/>
                         
                         </div>
-                        <div className="cardback">
+                        <div className="content-center text-hightlight text-2xl xl:w-full
+                            xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base">
                             ABOUT
                         </div>
                     </div>
                 </Link>
-                <Link className="w-full h-[50px] content-center perspective-distant group
+                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-0
                     transition-colors duration-1000 ease-in-out" 
                     href="/Experience"
                     id="HeaderExperience"> 
-                    <div className="cardcontainer group-hover:rotate-y-180">
-                        <div className="cardfront">
+                    <div className="h-full w-full flex flex-row space-x-4 
+                        xl:relative xl:transform-3d xl:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
+                        <div className="h-full w-1/3 xl:w-full xl:absolute xl:backface-hidden">
                             <Image
-                                className="m-auto"
+                                className="m-auto w-auto h-full"
                                 src={Experience}
-                                width="50" height="50"
+                                width={0} height={0}
                                 alt="Experience"
-                                id="HeaderExperienceImg"/>
+                                id="HeaderExperienceImg"
+                                quality={100}/>
                         </div>
-                        <div className="cardback">
+                        <div className="content-center text-hightlight text-2xl xl:w-full
+                            xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base">
                             EXPERIENCE
                         </div>
                     </div>
                 </Link>
-                <Link className="w-full h-[50px] content-center perspective-distant group
+                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-0
                     transition-colors duration-1000 ease-in-out" 
                     href="/Projects"
                     id="HeaderProjects">
-                    <div className="cardcontainer group-hover:rotate-y-180">
-                        <div className="cardfront">
+                    <div className="w-full h-full flex flex-row space-x-4 
+                        xl:relative xl:transform-3d xl:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
+                        <div className="h-full w-1/3 xl:w-full xl:absolute xl:backface-hidden">
                             <Image
-                                className="m-auto"
+                                className="m-auto w-auto h-full"
                                 src={Projects}
-                                width="50" height="50"
+                                width={0} height={0}
                                 alt="Projects"
-                                id="HeaderProjectsImg"/>
+                                id="HeaderProjectsImg"
+                                quality={100}/>
                         </div>
-                        <div className="cardback">
+                        <div className="text-hightlight content-center text-2xl xl:w-full 
+                            xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base">
                             PROJECTS
                         </div>
                     </div> 
                 </Link>
-                <Link className="w-full h-[50px] content-center perspective-distant group
+                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-0
                     transition-colors duration-1000 ease-in-out"
                     href="/Contact"
                     id="HeaderContact"> 
-                    <div className="cardcontainer group-hover:rotate-y-180">
-                        <div className="cardfront">
+                    <div className="h-full w-full flex flex-row space-x-4 
+                        xl:relative xl:transform-3d xl:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
+                        <div className="h-full w-1/3 xl:w-full xl:absolute xl:backface-hidden">
                             <Image
-                                className="m-auto"
+                                className="m-auto w-auto h-full"
                                 src={Contact}
-                                width="50" height="50"
+                                width={0} height={0}
                                 alt="Contact"
-                                id="HeaderContactImg"/>
+                                id="HeaderContactImg"
+                                quality={100}/>
                         </div>
-                        <div className="cardback">
+                        <div className="text-hightlight content-center text-2xl xl:w-full
+                            xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base">
                             CONTACT
                         </div>
                     </div>
                 </Link>
             </div>
 
-            <div className="w-full flex flex-col space-y-3 space">
+            <div className="w-full h-1/3 flex flex-row xl:flex-col space-y-3 ">
                 <div className="relative w-full h-[25px] group cursor-pointer"
                     id="HeaderResume">  
                     <div className="absolute w-full h-full opacity-0 group-hover:opacity-100 
@@ -258,17 +273,17 @@ export default function Header() {
                             width="25" height="25"
                             alt="LinkedIn"/>
                     </div>
-            </a>
-            <a className="w-full h-[25px] relative group cursor-pointer"
-                href="https://ryebread26.itch.io"
-                target="_blank">
-                <div className="absolute w-full h-full opacity-0 group-hover:opacity-100 
-                        transition-opacity duration-300 ease-in-out">
-                        <Image 
-                            className="m-auto"
-                            src="/ItchIoColor.webp"
-                            width="25" height="25"
-                            alt="ItchIoColor"/>
+                </a>
+                <a className="w-full h-[25px] relative group cursor-pointer"
+                    href="https://ryebread26.itch.io"
+                    target="_blank">
+                    <div className="absolute w-full h-full opacity-0 group-hover:opacity-100 
+                            transition-opacity duration-300 ease-in-out">
+                            <Image 
+                                className="m-auto"
+                                src="/ItchIoColor.webp"
+                                width="25" height="25"
+                                alt="ItchIoColor"/>
                     </div>
                     <div className="absolute w-full h-full group-hover:opacity-0 
                         transition-opacity duration-100 ease-in-out">
