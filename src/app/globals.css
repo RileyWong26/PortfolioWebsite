@@ -15,39 +15,14 @@
   --textcolor2dark: #ababab;
   --primary: black;
   --primarydark: white;
+  --xs2 : 10px;
+  --xs3: 6px;
 
 }
 
-.cardcontainer {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 600ms ease-in-out;
-}
-.cardfront, .cardback{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden; 
-  top: 0%;
-  background: transparent;
-  cursor: pointer;
-}
-.cardback{
-  color: var(--color2);
-  transform: rotateY(180deg);
-  display: flex; 
-  flex-direction: column;
-  justify-content:space-evenly;
-}
-.glitchText{
-  text-shadow:
-    0.05em 0.05em 0.025em rgba(255, 0, 0),
-    -0.05em 0.05em 0.025em rgba(0, 255, 0),
-    0 0.05em 0.025em rgba(0, 0, 255);
-  animation: glitch 3s infinite;
-}
+
+
+
 
 @keyframes glitch{
   0%{
@@ -109,6 +84,21 @@
     transform: rotateY(-25deg);
   }
 }
+@keyframes pulldown {
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}@keyframes goup {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-100%);
+  }
+}
 
 @theme {
   --color-background1: var(--background1);
@@ -124,11 +114,17 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
+  --text-xs2: var(--xs2);
+  --text-xs3: var(--xs3);
+
   --animate-pullup: appearUp 1s ease-in-out ;
   --animate-pullup2: appearUp 1s ease-in-out forwards;
   --animate-glitchtext: glitch 3s infinite;
   --animate-bounceright: bounceRight 2s ease-in-out infinite;
   --animate-turn : turn 1s ease-in-out forwards;
+  --animate-pulldown: pulldown 1s ease-in-out forwards;
+  --animate-goup: pulldown 1s ease-in-out backwards;
+  
 }
 .dark{
   --color-background3: var(--background3dark);
@@ -136,9 +132,38 @@
   --color-background1: var(--background1dark);
   --color-text2: var(--textcolor2dark);
   --color-primary: var(--primarydark);
-
 }
 @layer utilities{
+  .cardcontainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 600ms ease-in-out;
+}
+.cardfront, .cardback{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; 
+  top: 0%;
+  background: transparent;
+  cursor: pointer;
+}
+.cardback{
+  color: var(--color2);
+  transform: rotateY(180deg);
+  display: flex; 
+  flex-direction: column;
+  justify-content:space-evenly;
+}
+.glitchText{
+  text-shadow:
+    0.05em 0.05em 0.025em rgba(255, 0, 0),
+    -0.05em 0.05em 0.025em rgba(0, 255, 0),
+    0 0.05em 0.025em rgba(0, 0, 255);
+  animation: glitch 3s infinite;
+}
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
