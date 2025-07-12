@@ -7,7 +7,8 @@ import HeaderButton from "./headerbutton";
 export default async function Home() {
 
   return (
-    <div className = "bg-background1 w-screen min-h-screen font-Anonymous transition-colors duration-1000 ease-in-out flex flex-col xl:flex-row space-x-2">
+    <div className="bg-background1 w-screen min-h-screen font-Anonymous 
+      transition-colors duration-1000 ease-in-out flex flex-col xl:flex-row space-x-2 relative">
       <Header />
       <HeaderButton />
 
