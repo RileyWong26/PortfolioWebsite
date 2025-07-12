@@ -22,6 +22,7 @@ const Header = () => {
     const [Mode, setMode] = useState("/LightMode/LightMode.webp");
     const [ModeColor, setModeColor] = useState("/LightMode/LightModeColor.webp");
 
+    // Change which section is highlighted
     const changeSection = (newTheme, section) => {
         if (section === "") {
             document.getElementById("HeaderHome").classList.add("bg-background3");
@@ -49,6 +50,7 @@ const Header = () => {
         }
     };
  
+2
     const switchTheme = (newTheme) => { 
 
         setLogo(`/${newTheme}Mode/RLogo${newTheme}.webp`);
@@ -93,15 +95,15 @@ const Header = () => {
         <div className="absolute bg-background2 h-screen w-screen xl:w-28 text-center flex flex-col justify-between z-10
             transition-all duration-1000 ease-in-out xl:sticky top-0 -translate-y-full xl:translate-y-0"
             id="Header">
-            <div className="w-full opacity-0 h-[10vh] xl:opacity-100">
+            <div className="w-full opacity-0 h-[10vh] xl:h-[20vh] xl:opacity-100">
                 <Image 
                     src={Logo} 
-                    className ="m-auto"
-                    width="100" height="100"
+                    className ="m-auto w-full h-auto"
+                    width={0} height={0}
                     alt="Logo"
                     quality={100}/>
-                <h1 className="m-auto font-bold text-xs text-primary transition-colors duration-1000 ease-in-out">
-                    Riley
+                <h1 className="m-auto text-xs2 text-primary transition-colors duration-1000 ease-in-out">
+                    rileywongwong @gmail.com
                 </h1>
             </div>
 
@@ -215,108 +217,135 @@ const Header = () => {
                 </Link>
             </div>
 
-            <div className="w-full h-1/3 flex flex-row xl:flex-col space-y-3">
-                <div className="relative w-full h-1/2 xl:h-[25px] group cursor-pointer"
+            <div className="w-full h-1/10 xl:h-auto flex flex-row xl:flex-col space-y-3 space-x-3 -mx-3 xl:mx-0">
+                <div className="w-1/5 xl:w-full xl:h-[40px] group cursor-pointer p-2 xl:p-1 z-1"
                     id="HeaderResume">  
-                    <div className="absolute w-full h-full opacity-0 group-hover:opacity-100 
-                        transition-opacity duration-300 ease-in-out">
+                    <div className="w-full h-full hidden group-hover:block 
+                        transition-all duration-300 ease-in-out">
                         <Image 
-                            className="m-auto"
+                            className="m-auto h-full w-auto "
                             src="/ResumeColor.webp"
-                            width="25" height="25"
+                            width={0} height={0}
+                            quality={100}
                             alt="ResumeColor"/>
                     </div>
-                    <div className="absolute w-full h-full group-hover:opacity-0 
-                        transition-opacity duration-100 ease-in-out">
+                    <div className=" m-auto w-full h-full group-hover:hidden
+                        transition-all duration-100 ease-in-out">
                         <Image 
-                            className="m-auto"
+                            className="m-auto h-full w-auto"
                             src={Resume}
-                            width="25" height="25"
+                            width={0} height={0}
+                            quality={100}
                             alt="Resume"/>
                     </div>
                 </div>
-                <a className="relative w-full h-[25px] group cursor-pointer"
+                <a className=" w-1/5 xl:w-full xl:h-[40px] group cursor-pointer p-2  xl:p-1 z-1"
                     href="https://github.com/RileyWong26"
                     target="_blank">
-                    <div className="absolute w-full h-full opacity-0 group-hover:opacity-100 
-                        transition-opacity duration-300 ease-in-out">
+                    <div className="w-full h-full group-hover:block
+                        transition-opacity duration-300 ease-in-out hidden">
                         <Image 
-                            className="m-auto"
+                            className="m-auto h-full w-auto"
                             src="/GitHubColor.webp"
-                            width="25" height="25"
+                            width={0} height={0}
+                            quality={100}
                             alt="GitHubColor"/>
                     </div>
-                    <div className="absolute w-full h-full group-hover:opacity-0 
-                        transition-opacity duration-100 ease-in-out">
+                    <div className="w-full h-full 
+                        group-hover:hidden">
                         <Image 
-                            className="m-auto"
+                            className="m-auto h-full w-auto"
                             src={GitHub}
-                            width="25" height="25"
+                            width={0} height={0}
+                            quality={100}
                             alt="GitHub"/>
                     </div>
                 </a>
-                <a className="w-full h-[25px] relative group cursor-pointer"
+                <a className="w-1/5 xl:w-full xl:h-[40px] group cursor-pointer p-2 xl:p-1 z-1"
                     href="//www.linkedin.com/in/riley-wong-1051b2250"
                     target="_blank">
-                    <div className="absolute w-full h-full opacity-0 group-hover:opacity-100 
+                    <div className=" w-full h-full group-hover:block hidden
                         transition-opacity duration-300 ease-in-out">
                         <Image 
-                            className="m-auto"
+                            className="m-auto h-full w-auto"
                             src="/LinkedInColor.webp"
-                            width="25" height="25"
+                            width={0} height={0}
                             alt="LinkedInColor"/>
                     </div>
-                    <div className="absolute w-full h-full group-hover:opacity-0 
+                    <div className=" w-full h-full group-hover:hidden
                         transition-opacity duration-100 ease-in-out">
                         <Image 
-                            className="m-auto"
+                            className="m-auto h-full w-auto"
                             src={LinkedIn}
-                            width="25" height="25"
+                            width={0} height={0}
                             alt="LinkedIn"/>
                     </div>
                 </a>
-                <a className="w-full h-[25px] relative group cursor-pointer"
+                <a className="w-1/5 xl:w-full xl:h-[40px] group cursor-pointer p-2 xl:p-1 z-1"
                     href="https://ryebread26.itch.io"
                     target="_blank">
-                    <div className="absolute w-full h-full opacity-0 group-hover:opacity-100 
+                    <div className="m-auto w-full h-full hidden group-hover:block
                             transition-opacity duration-300 ease-in-out">
                             <Image 
-                                className="m-auto"
+                                className="m-auto h-full w-auto"
                                 src="/ItchIoColor.webp"
-                                width="25" height="25"
+                                width={0} height={0}
                                 alt="ItchIoColor"/>
                     </div>
-                    <div className="absolute w-full h-full group-hover:opacity-0 
-                        transition-opacity duration-100 ease-in-out">
+                    <div className="m-auto w-full h-full group-hover:hidden">
                         <Image 
-                            className="m-auto"
+                            className="m-auto h-full w-auto"
                             src={ItchIo}
-                            width="25" height="25"
+                            width={0} height={0}
                             alt="ItchIo"/>
                     </div>
                 </a>
-                <div className="w-full h-[40px] relative group cursor-pointer"
+                <div className="w-1/5 xl:w-full xl:h-[40px] relative group cursor-pointer z-1"
                     id="HeaderTheme"
         
-                    onClick={() => {[switchTheme((theme === "Light") ? "Dark" : "Light") , changeSection((theme === "Light") ? "Dark" : "Light" ,window.location.pathname.split("/")[1])]}}>
-                    <div className="absolute w-full h-full opacity-0 group-hover:opacity-100 
+                    onClick={() => {[
+                        switchTheme((theme === "Light") ? "Dark" : "Light") , 
+                        changeSection(
+                                (theme === "Light") ? "Dark" : "Light" ,
+                                window.location.pathname.split("/")[1]
+                            )
+                        ]}
+                        }>
+                    <div className="m-auto w-full h-full hidden group-hover:block
                         transition-opacity duration-300 ease-in-out">
                         <Image 
-                            className="m-auto"
+                            className="m-auto h-full w-auto"
                             src={ModeColor}
-                            width="40" height="40"
+                            width={0} height={0}
                             alt="ThemeColor"/>
                     </div>
-                    <div className="absolute w-full h-full group-hover:opacity-0 
+                    <div className="w-full h-full group-hover:hidden
                         transition-opacity duration-100 ease-in-out">
                         <Image 
-                            className="m-auto"
+                            className="m-auto h-full w-auto"
                             src={Mode}
-                            width="40" height="40"
+                            width={0} height={0}
                             alt="Theme"/>
                     </div>
 
                 </div>
+            </div>
+            <div className="w-full h-1/10 flex flex-row xl:hidden content-center space-x-10">
+                <div className="w-1/4 h-full">
+                    <Image 
+                        className="ml-auto h-full w-auto hidden dark:block"
+                        src={"/DarkMode/MailDark.webp"}
+                        height={0} width={0}
+                        alt={"MailContactDark"}/>
+                    <Image 
+                        className="ml-auto h-full w-auto dark:hidden"
+                        src={"/LightMode/MailLight.webp"}
+                        height={0} width={0}
+                        alt={"MailContactLight"}/>
+                </div>
+                <h1 className="my-auto text-xl text-hightlight tracking-wider">
+                    rileywongwong@gmail.com
+                </h1>
             </div>
         </div>
     )
