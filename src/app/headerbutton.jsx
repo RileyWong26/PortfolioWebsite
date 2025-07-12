@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 
-export default function HeaderButton() {
+ const HeaderButton = () =>{
     return(
-        <div className="h-[10vh] aspect-square ml-auto -translate-x-1/2 bg-background2 rounded-4xl flex flex-col 
-            space-y-2 content-center group left-3/4 absolute xl:hidden transition-all duration-1000 ease-in-out"
+        <div className="h-[10vh] aspect-square ml-auto -translate-x-1/2 bg-background2 rounded-4xl flex flex-col z-10
+            space-y-2 content-center group left-3/4 absolute xl:hidden transition-all duration-1000 ease-in-out active:bg-amber-200"
                 id="HeaderButton"
                 onClick={() => {
                     document.getElementById("HeaderButton").classList.toggle("open");
@@ -15,7 +15,7 @@ export default function HeaderButton() {
 
                 }}>
                 <Image className="mx-auto mt-auto rounded-4xl group-[.open]:rotate-45 group-[.open]:translate-y-2.5 
-                    transition-transform duration-500 ease-in-out dark:hidden"
+                    transition-transform duration-500 ease-in-out dark:hidden "
                     src={"LightMode/Line.webp"}
                     alt={"Line1"}
                     width={40}height={0}/>
@@ -47,3 +47,5 @@ export default function HeaderButton() {
         </div>
     )
 }
+
+export default HeaderButton;

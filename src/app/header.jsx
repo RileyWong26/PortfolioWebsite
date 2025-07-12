@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, {useState, useEffect} from "react";
 
 
-export default function Header() {
+const Header = () => {
     // Theme
     const [theme, setTheme] = useState("Light");
 
@@ -24,26 +24,26 @@ export default function Header() {
 
     const changeSection = (newTheme, section) => {
         if (section === "") {
-            document.getElementById("HeaderHome").classList.add("bg-background3", "dark:bg-background3dark");
+            document.getElementById("HeaderHome").classList.add("bg-background3");
             setHome(`/${newTheme}Mode/Home2${newTheme}.webp`);
         }
         else if (section === "About") {
-            document.getElementById("HeaderAbout").classList.add("bg-background3", "dark:bg-background3dark");
+            document.getElementById("HeaderAbout").classList.add("bg-background3");
             setAbout(`/${newTheme}Mode/About2${newTheme}.webp`);
 
         }
         else if (section === "Experience") {
-            document.getElementById("HeaderExperience").classList.add("bg-background3", "dark:bg-background3dark");
+            document.getElementById("HeaderExperience").classList.add("bg-background3");
             setExperience(`/${newTheme}Mode/Experience2${newTheme}.webp`);
 
         }
         else if (section === "Projects") {
-            document.getElementById("HeaderProjects").classList.add("bg-background3", "dark:bg-background3dark");
+            document.getElementById("HeaderProjects").classList.add("bg-background3");
             setProjects(`/${newTheme}Mode/Projects2${newTheme}.webp`);
 
         }
         else if (section === "Contact") {
-            document.getElementById("HeaderContact").classList.add("bg-background3", "dark:bg-background3dark");
+            document.getElementById("HeaderContact").classList.add("bg-background3");
             setContact(`/${newTheme}Mode/Mail2${newTheme}.webp`);
 
         }
@@ -90,7 +90,7 @@ export default function Header() {
 
 
     return (
-        <div className=" absolute bg-background2 h-screen w-screen xl:w-28 text-center flex flex-col justify-between 
+        <div className="absolute bg-background2 h-screen w-screen xl:w-28 text-center flex flex-col justify-between z-10
             transition-all duration-1000 ease-in-out xl:sticky top-0 -translate-y-full xl:translate-y-0"
             id="Header">
             <div className="w-full opacity-0 h-[10vh] xl:opacity-100">
@@ -105,15 +105,16 @@ export default function Header() {
                 </h1>
             </div>
 
-            <div className="w-full h-2/3 xl:h-auto flex flex-col">
+            <div className="w-full h-2/3 xl:h-auto flex flex-col ">
                 <Link className="w-full h-1/5 xl:h-[50px] content-center p-4 xl:p-0
-                    perspective-distant group transition-colors duration-1000 ease-in-out" href="/"
+                    perspective-distant group transition-colors duration-1000 ease-in-out" 
+                    href="/"
                     id="HeaderHome"> 
                     <div className="h-full w-full flex flex-row space-x-4 
                         xl:relative xl:transform-3d xl:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
                         <div className="h-full w-1/3 xl:w-full xl:absolute xl:backface-hidden ">
                             <Image
-                                className="m-auto h-full w-auto"
+                                className="m-auto h-full w-auto "
                                 src={Home}
                                 width={0} height={0}
                                 alt="Home"
@@ -166,7 +167,7 @@ export default function Header() {
                         </div>
                         <div className="content-center text-hightlight text-2xl xl:w-full
                             xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base">
-                            EXPERIENCE
+                            EXPERIENCE  
                         </div>
                     </div>
                 </Link>
@@ -214,8 +215,8 @@ export default function Header() {
                 </Link>
             </div>
 
-            <div className="w-full h-1/3 flex flex-row xl:flex-col space-y-3 ">
-                <div className="relative w-full h-[25px] group cursor-pointer"
+            <div className="w-full h-1/3 flex flex-row xl:flex-col space-y-3">
+                <div className="relative w-full h-1/2 xl:h-[25px] group cursor-pointer"
                     id="HeaderResume">  
                     <div className="absolute w-full h-full opacity-0 group-hover:opacity-100 
                         transition-opacity duration-300 ease-in-out">
@@ -320,3 +321,5 @@ export default function Header() {
         </div>
     )
 }
+
+export default Header;
