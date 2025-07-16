@@ -26,7 +26,8 @@ export default async function About(){
                                 src="/Images/GDSxLOJAM1.png"
                                 width={0} height={0}
                                 quality={100}
-                                alt="AboutMeImage"/>
+                                alt="AboutMeImage"
+                                unoptimized/>
                         </div>
                         <h1 className=" w-3/4 m-auto text-center mt-5 text-xs xl:text-sm"> Picture of me,(left most), and my friends winning the 2025 LoJam X GDS Game Jam</h1>
                     </div>
