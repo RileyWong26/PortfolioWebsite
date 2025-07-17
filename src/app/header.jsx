@@ -50,7 +50,6 @@ const Header = () => {
         }
     };
  
-2
     const switchTheme = (newTheme) => { 
 
         setLogo(`/${newTheme}Mode/RLogo${newTheme}.webp`);
@@ -101,7 +100,8 @@ const Header = () => {
                     className ="m-auto w-full h-auto"
                     width={0} height={0}
                     alt="Logo"
-                    quality={100}/>
+                    quality={100}
+                    unoptimized/>
                 <h1 className="m-auto text-xs2 text-primary transition-colors duration-1000 ease-in-out">
                     rileywongwong @gmail.com
                 </h1>
@@ -121,7 +121,8 @@ const Header = () => {
                                 width={0} height={0}
                                 alt="Home"
                                 id="HeaderHomeImg"
-                                quality={100}/>
+                                quality={100}
+                                unoptimized/>
                         </div>
                         <div className="content-center text-hightlight text-2xl xl:w-full 
                             xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base"> 
@@ -143,7 +144,7 @@ const Header = () => {
                                 width={0} height={0}
                                 alt="About Me"
                                 id="HeaderAboutImg"
-                                quality={100}/>
+                                unoptimized/>
                         
                         </div>
                         <div className="content-center text-hightlight text-2xl xl:w-full
@@ -165,7 +166,8 @@ const Header = () => {
                                 width={0} height={0}
                                 alt="Experience"
                                 id="HeaderExperienceImg"
-                                quality={100}/>
+                                quality={100}
+                                unoptimized/>
                         </div>
                         <div className="content-center text-hightlight text-2xl xl:w-full
                             xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base">
@@ -186,7 +188,8 @@ const Header = () => {
                                 width={0} height={0}
                                 alt="Projects"
                                 id="HeaderProjectsImg"
-                                quality={100}/>
+                                quality={100}
+                                unoptimized/>
                         </div>
                         <div className="text-hightlight content-center text-2xl xl:w-full 
                             xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base">
@@ -207,7 +210,8 @@ const Header = () => {
                                 width={0} height={0}
                                 alt="Contact"
                                 id="HeaderContactImg"
-                                quality={100}/>
+                                quality={100}
+                                unoptimized/>
                         </div>
                         <div className="text-hightlight content-center text-2xl xl:w-full
                             xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base">
@@ -218,7 +222,9 @@ const Header = () => {
             </div>
 
             <div className="w-full h-1/10 xl:h-auto flex flex-row xl:flex-col space-y-3 space-x-3 -mx-3 xl:mx-0">
-                <div className="w-1/5 xl:w-full xl:h-[40px] group cursor-pointer p-2 xl:p-1 z-1"
+                <a className="w-1/5 xl:w-full xl:h-[30px] group cursor-pointer p-3 xl:p-1 z-1"
+                    href="https://docs.google.com/document/d/1C5AbmvgPOqlUoBYgSuBjcOcLNpI1PlARaDBG_yKkMBU/edit?usp=drive_link"
+                    target="_blank"
                     id="HeaderResume">  
                     <div className="w-full h-full hidden group-hover:block 
                         transition-all duration-300 ease-in-out">
@@ -227,7 +233,8 @@ const Header = () => {
                             src="/ResumeColor.webp"
                             width={0} height={0}
                             quality={100}
-                            alt="ResumeColor"/>
+                            alt="ResumeColor"
+                            unoptimized/>
                     </div>
                     <div className=" m-auto w-full h-full group-hover:hidden
                         transition-all duration-100 ease-in-out">
@@ -236,10 +243,11 @@ const Header = () => {
                             src={Resume}
                             width={0} height={0}
                             quality={100}
-                            alt="Resume"/>
+                            alt="Resume"
+                            unoptimized/>
                     </div>
-                </div>
-                <a className=" w-1/5 xl:w-full xl:h-[40px] group cursor-pointer p-2  xl:p-1 z-1"
+                </a>
+                <a className=" w-1/5 xl:w-full xl:h-[30px] group cursor-pointer p-3  xl:p-1 z-1"
                     href="https://github.com/RileyWong26"
                     target="_blank">
                     <div className="w-full h-full group-hover:block
@@ -249,7 +257,8 @@ const Header = () => {
                             src="/GitHubColor.webp"
                             width={0} height={0}
                             quality={100}
-                            alt="GitHubColor"/>
+                            alt="GitHubColor"
+                            unoptimized/>
                     </div>
                     <div className="w-full h-full 
                         group-hover:hidden">
@@ -258,10 +267,11 @@ const Header = () => {
                             src={GitHub}
                             width={0} height={0}
                             quality={100}
-                            alt="GitHub"/>
+                            alt="GitHub"
+                            unoptimized/>
                     </div>
                 </a>
-                <a className="w-1/5 xl:w-full xl:h-[40px] group cursor-pointer p-2 xl:p-1 z-1"
+                <a className="w-1/5 xl:w-full xl:h-[30px] group cursor-pointer p-3 xl:p-1 z-1"
                     href="//www.linkedin.com/in/riley-wong-1051b2250"
                     target="_blank">
                     <div className=" w-full h-full group-hover:block hidden
@@ -270,7 +280,8 @@ const Header = () => {
                             className="m-auto h-full w-auto"
                             src="/LinkedInColor.webp"
                             width={0} height={0}
-                            alt="LinkedInColor"/>
+                            alt="LinkedInColor"
+                            unoptimized/>
                     </div>
                     <div className=" w-full h-full group-hover:hidden
                         transition-opacity duration-100 ease-in-out">
@@ -278,10 +289,11 @@ const Header = () => {
                             className="m-auto h-full w-auto"
                             src={LinkedIn}
                             width={0} height={0}
-                            alt="LinkedIn"/>
+                            alt="LinkedIn"
+                            unoptimized/>
                     </div>
                 </a>
-                <a className="w-1/5 xl:w-full xl:h-[40px] group cursor-pointer p-2 xl:p-1 z-1"
+                <a className="w-1/5 xl:w-full xl:h-[30px] group cursor-pointer p-3 xl:p-1 z-1"
                     href="https://ryebread26.itch.io"
                     target="_blank">
                     <div className="m-auto w-full h-full hidden group-hover:block
@@ -290,14 +302,16 @@ const Header = () => {
                                 className="m-auto h-full w-auto"
                                 src="/ItchIoColor.webp"
                                 width={0} height={0}
-                                alt="ItchIoColor"/>
+                                alt="ItchIoColor"
+                                unoptimized/>
                     </div>
                     <div className="m-auto w-full h-full group-hover:hidden">
                         <Image 
                             className="m-auto h-full w-auto"
                             src={ItchIo}
                             width={0} height={0}
-                            alt="ItchIo"/>
+                            alt="ItchIo"
+                            unoptimized/>
                     </div>
                 </a>
                 <div className="w-1/5 xl:w-full xl:h-[40px] relative group cursor-pointer z-1"
@@ -317,7 +331,8 @@ const Header = () => {
                             className="m-auto h-full w-auto"
                             src={ModeColor}
                             width={0} height={0}
-                            alt="ThemeColor"/>
+                            alt="ThemeColor"
+                            unoptimized/>
                     </div>
                     <div className="w-full h-full group-hover:hidden
                         transition-opacity duration-100 ease-in-out">
@@ -325,7 +340,8 @@ const Header = () => {
                             className="m-auto h-full w-auto"
                             src={Mode}
                             width={0} height={0}
-                            alt="Theme"/>
+                            alt="Theme"
+                            unoptimized/>
                     </div>
 
                 </div>
@@ -336,12 +352,14 @@ const Header = () => {
                         className="ml-auto h-full w-auto hidden dark:block"
                         src={"/DarkMode/MailDark.webp"}
                         height={0} width={0}
-                        alt={"MailContactDark"}/>
+                        alt={"MailContactDark"}
+                        unoptimized/>
                     <Image 
                         className="ml-auto h-full w-auto dark:hidden"
                         src={"/LightMode/MailLight.webp"}
                         height={0} width={0}
-                        alt={"MailContactLight"}/>
+                        alt={"MailContactLight"}
+                        unoptimized/>
                 </div>
                 <h1 className="my-auto text-xl text-hightlight tracking-wider">
                     rileywongwong@gmail.com
