@@ -15,6 +15,8 @@
   --textcolor2dark: #ababab;
   --primary: black;
   --primarydark: white;
+  --borderselect: #A0DEFF;
+  --borderdeny: #FF5050;
   --xs2 : 10px;
   --xs3: 6px;
 
@@ -109,7 +111,9 @@
   --color-hightlight : var(--color2);
   --color-tag: var(--textcolor2);
   --color-alt: var(--textcolor2dark);
-  
+  --color-borderselect: var(--borderselect);
+  --color-borderdeny: var(--borderdeny);
+
   --font-Anonymous: var(--font-Anonymous);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
