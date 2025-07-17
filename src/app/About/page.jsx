@@ -23,7 +23,7 @@ export default async function About(){
                             transition-all duration-1000 ease-in-out xl:rotate-x-5 xl:rotate-y-20 scale-95 hover:-rotate-x-15 
                             hover:-rotate-y-25 hover:scale-120 hover:-translate-y-5"> 
                             <Image className="m-auto rounded-2xl h-full w-auto xl:w-full xl:h-auto"
-                                src="/Images/GDSxLOJAM1.png"
+                                src="/Images/GDSxLOJAM1.webp"
                                 width={0} height={0}
                                 quality={100}
                                 alt="AboutMeImage"
