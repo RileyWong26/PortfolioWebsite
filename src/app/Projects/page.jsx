@@ -32,9 +32,8 @@ function ProjectCard({id, data}) {
                     width={0} height={0}
                     key={id}
                     alt="Project Image"
-                    unoptimized
                     fill
-                    quality={100}
+                    unoptimized
                    />
             }
             
