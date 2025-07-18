@@ -3,7 +3,7 @@ import Image from "next/image";
 
  const HeaderButton = () =>{
     return(
-        <div className="h-[10vh] aspect-square ml-auto -translate-x-1/2 bg-background2 rounded-4xl flex flex-col z-10
+        <div className="h-[10vh] aspect-square ml-auto bg-background2 rounded-4xl flex flex-col z-10
             space-y-2 content-center group left-3/4 fixed xl:hidden transition-all duration-1000 ease-in-out"
                 id="HeaderButton"
                 onClick={() => {
