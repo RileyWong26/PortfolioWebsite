@@ -17,6 +17,7 @@
   --primarydark: white;
   --borderselect: #A0DEFF;
   --borderdeny: #FF5050;
+  --passed: #56C079;
   --xs2 : 10px;
   --xs3: 6px;
 
@@ -113,6 +114,7 @@
   --color-alt: var(--textcolor2dark);
   --color-borderselect: var(--borderselect);
   --color-borderdeny: var(--borderdeny);
+  --color-passed : var(--passed);
 
   --font-Anonymous: var(--font-Anonymous);
   --font-sans: var(--font-geist-sans);
