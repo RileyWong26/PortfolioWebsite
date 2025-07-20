@@ -91,9 +91,10 @@ const Header = () => {
 
 
     return (
-        <div className="absolute bg-background2 h-screen w-screen xl:w-28 text-center flex flex-col justify-between z-10
+        <div className="absolute bg-background2 h-screen w-screen xl:max-w-30 text-center flex flex-col justify-between z-10
             transition-all duration-1000 ease-in-out xl:sticky top-0 -translate-y-full xl:translate-y-0"
             id="Header">
+            {/*  Logo */}
             <div className="w-full opacity-0 h-[10vh] xl:h-[20vh] xl:opacity-100">
                 <Image 
                     src={Logo} 
@@ -107,6 +108,7 @@ const Header = () => {
                 </h1>
             </div>
 
+            {/*  Page Redirections */}
             <div className="w-full h-2/3 xl:h-auto flex flex-col ">
                 <Link className="w-full h-1/5 xl:h-[50px] content-center p-4 xl:p-0
                     perspective-distant group transition-colors duration-1000 ease-in-out" 
@@ -161,7 +163,7 @@ const Header = () => {
                         xl:relative xl:transform-3d xl:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
                         <div className="h-full w-1/3 xl:w-full xl:absolute xl:backface-hidden">
                             <Image
-                                className="m-auto w-auto h-full"
+                                className="m-auto h-full w-auto"
                                 src={Experience}
                                 width={0} height={0}
                                 alt="Experience"
@@ -183,7 +185,7 @@ const Header = () => {
                         xl:relative xl:transform-3d xl:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
                         <div className="h-full w-1/3 xl:w-full xl:absolute xl:backface-hidden">
                             <Image
-                                className="m-auto w-auto h-full"
+                                className="m-auto h-full w-auto"
                                 src={Projects}
                                 width={0} height={0}
                                 alt="Projects"
@@ -221,6 +223,7 @@ const Header = () => {
                 </Link>
             </div>
 
+            {/*Social external links */}
             <div className="w-full h-1/10 xl:h-auto flex flex-row xl:flex-col space-y-3 space-x-3 -mx-3 xl:mx-0">
                 <a className="w-1/5 xl:w-full xl:h-[30px] group cursor-pointer p-3 xl:p-1 z-1"
                     href="https://docs.google.com/document/d/1C5AbmvgPOqlUoBYgSuBjcOcLNpI1PlARaDBG_yKkMBU/edit?usp=drive_link"
@@ -346,6 +349,7 @@ const Header = () => {
 
                 </div>
             </div>
+            {/*Mobile only contact information */}
             <div className="w-full h-1/10 flex flex-row xl:hidden content-center space-x-10">
                 <div className="w-1/4 h-full">
                     <Image 
