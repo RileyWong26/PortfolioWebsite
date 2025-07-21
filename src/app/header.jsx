@@ -317,6 +317,7 @@ const Header = () => {
                             unoptimized/>
                     </div>
                 </a>
+                {/* Theme button */}
                 <div className="w-1/5 xl:w-full xl:h-[40px] relative group cursor-pointer z-1"
                     id="HeaderTheme"
         
@@ -350,10 +351,10 @@ const Header = () => {
                 </div>
             </div>
             {/*Mobile only contact information */}
-            <div className="w-full h-1/10 flex flex-row xl:hidden content-center space-x-10">
-                <div className="w-1/4 h-full">
+            <div className="w-full h-[13%] flex flex-row xl:hidden content-center space-x-5 p-4">
+                <div className="w-1/3 h-full">
                     <Image 
-                        className="ml-auto h-full w-auto hidden dark:block"
+                        className="m-auto h-full w-auto hidden dark:block"
                         src={"/DarkMode/MailDark.webp"}
                         height={0} width={0}
                         alt={"MailContactDark"}
@@ -365,7 +366,7 @@ const Header = () => {
                         alt={"MailContactLight"}
                         unoptimized/>
                 </div>
-                <h1 className="my-auto text-xl text-hightlight tracking-wider">
+                <h1 className="my-auto text-base text-hightlight">
                     rileywongwong@gmail.com
                 </h1>
             </div>
