@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, {useState, useEffect} from "react";
 
 
+
 const Header = () => {
     // Theme
     const [theme, setTheme] = useState("Light");
@@ -86,12 +87,11 @@ const Header = () => {
         }
         changeSection(newTheme, section);
 
-
     }, []);
 
 
     return (
-        <div className="absolute bg-background2 h-screen w-screen xl:max-w-30 text-center flex flex-col justify-between z-10
+        <nav className="absolute bg-background2 h-screen w-screen xl:max-w-30 text-center flex flex-col justify-between z-10
             transition-all duration-1000 ease-in-out xl:sticky top-0 -translate-y-full xl:translate-y-0"
             id="Header">
             {/*  Logo */}
@@ -109,7 +109,7 @@ const Header = () => {
             </div>
 
             {/*  Page Redirections */}
-            <div className="w-full h-2/3 xl:h-auto flex flex-col ">
+            <nav className="w-full h-2/3 xl:h-auto flex flex-col ">
                 <Link className="w-full h-1/5 xl:h-[50px] content-center p-4 xl:p-0
                     perspective-distant group transition-colors duration-1000 ease-in-out" 
                     href="/"
@@ -221,10 +221,10 @@ const Header = () => {
                         </div>
                     </div>
                 </Link>
-            </div>
+            </nav>
 
             {/*Social external links */}
-            <div className="w-full h-1/10 xl:h-auto flex flex-row xl:flex-col space-y-3 space-x-3 -mx-3 xl:mx-0">
+            <nav className="w-full h-1/10 xl:h-auto flex flex-row xl:flex-col space-y-3 space-x-3 -mx-3 xl:mx-0">
                 <a className="w-1/5 xl:w-full xl:h-[30px] group cursor-pointer p-3 xl:p-1 z-1"
                     href="https://docs.google.com/document/d/1C5AbmvgPOqlUoBYgSuBjcOcLNpI1PlARaDBG_yKkMBU/edit?usp=drive_link"
                     target="_blank"
@@ -349,9 +349,9 @@ const Header = () => {
                     </div>
 
                 </div>
-            </div>
+            </nav>
             {/*Mobile only contact information */}
-            <div className="w-full h-[13%] flex flex-row xl:hidden content-center space-x-5 p-4">
+            <section className="w-full h-[13%] flex flex-row xl:hidden content-center space-x-5 p-4">
                 <div className="w-1/3 h-full">
                     <Image 
                         className="m-auto h-full w-auto hidden dark:block"
@@ -369,8 +369,8 @@ const Header = () => {
                 <h1 className="my-auto text-base text-hightlight">
                     rileywongwong@gmail.com
                 </h1>
-            </div>
-        </div>
+            </section>
+        </nav>
     )
 }
 
