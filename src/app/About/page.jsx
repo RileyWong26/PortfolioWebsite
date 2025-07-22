@@ -4,19 +4,20 @@ import HeaderButton from "../headerbutton";
 
 export default async function About(){
     return (
-        <div className = "bg-background1 max-w-screen min-h-screen transition-colors duration-1000 ease-in-out flex flex-row space-x-2 text-primary">
+        <section className = "bg-background1 max-w-screen min-h-screen transition-colors duration-1000 ease-in-out flex flex-row space-x-2 text-primary">
             <Header />
             <HeaderButton />
             <div className="w-full flex flex-col animate-pullup min-h-screen ">
                 {/*Page Title */}
-                <h1 className="text-hightlight h-[15vh] font-bold text-2xl md:text-3xl w-4/5 mx-auto content-end ">About Me</h1>
-                <div className="w-full flex flex-col-reverse xl:flex-row py-10 space-y-5 h-auto ">
+                <h1 className="text-hightlight h-[15vh] font-bold text-2xl xl:text-3xl w-4/5 mx-auto content-end ">About Me</h1>
+                {/*Page content */}
+                <section className="w-full flex flex-col-reverse xl:flex-row py-10 space-y-5 h-auto ">
                     {/* Left side text*/}
                     <div className="mx-auto w-full min-h-[50vh] xl:h-full ">
                         <div className="xl:ml-auto xl:mr-0 m-auto w-4/5 h-full flex flex-col space-y-8 xl:space-y-12 justify-center">
-                            <h1 className="text-xs md:text-base leading-6">Hi! My name is Riley Wong, I am a developer passionate about creating robust software.  My love for creating started from trying to create both mods and games at age 10.  </h1>
-                            <h1 className="text-xs md:text-base leading-6">I am a team player who communicates effectively, faces problems critically and has the technical skills to tackle problems.  </h1>
-                            <h1 className="text-xs md:text-base leading-6">I am also passionate about music, and love to listen, play guitar and sing.</h1>
+                            <h1 className="text-xs xl:text-base leading-6">Hi! My name is Riley Wong, I am a developer passionate about creating robust software.  My love for developing started from creating both mods and games at age 10.  </h1>
+                            <h1 className="text-xs xl:text-base leading-6">I am a team player who communicates effectively, faces problems critically and has the technical skills to tackle problems.  </h1>
+                            <h1 className="text-xs xl:text-base leading-6">I am also passionate about music, and love to listen, play guitar and sing.</h1>
                         </div>
                     </div>
                     {/*Right side Image and description */}
@@ -32,12 +33,12 @@ export default async function About(){
                                     alt="AboutMeImage"
                                     unoptimized/>
                             </div>
-                            <h1 className=" w-3/4 m-auto text-center mt-5 text-xs md:text-sm"> Picture of me,(left most), and my friends winning the 2025 LoJam X GDS Game Jam</h1>
+                            <h1 className=" w-3/4 m-auto text-center mt-5 text-xs xl:text-sm"> Picture of me,(left most), and my friends winning the 2025 LoJam X GDS Game Jam</h1>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         
-        </div>
+        </section>
     )
 }
