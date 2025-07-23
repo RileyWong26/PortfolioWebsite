@@ -3,7 +3,7 @@ import Image from "next/image";
 
  const HeaderButton = () =>{
     return(
-        <div className="h-[10vh] aspect-square ml-auto bg-background2 rounded-4xl flex flex-col z-10
+        <button className="h-[60px] mt-2 aspect-square ml-auto bg-background2 rounded-4xl flex flex-col z-10
             space-y-2 content-center group left-3/4 fixed xl:hidden transition-all duration-1000 ease-in-out"
                 id="HeaderButton"
                 onClick={() => {
@@ -15,11 +15,12 @@ import Image from "next/image";
                     };
 
                 }}>
+                {/* Lines for hamburger drop down */}
                 <Image className="mx-auto mt-auto rounded-2xl group-[.open]:rotate-45 group-[.open]:translate-y-2.5 
                     transition-transform duration-500 ease-in-out dark:hidden "
                     src={"/LightMode/Line.webp"}
                     alt={"Line1"}
-                    width={40}height={0}/>
+                    width={40} height={0}/>
                 <Image className="mx-auto rounded-4xl group-[.open]:opacity-0 transition-all duration-500 ease-in-out 
                     dark:hidden"
                     src={"/LightMode/Line.webp"}
@@ -45,7 +46,7 @@ import Image from "next/image";
                     src={"/DarkMode/Line.webp"}
                     alt={"Line3"}
                     width={40} height={0}/>
-        </div>
+        </button>
     )
 }
 
