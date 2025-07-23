@@ -95,7 +95,7 @@ const Header = () => {
             transition-all duration-1000 ease-in-out xl:sticky top-0 -translate-y-full xl:translate-y-0"
             id="Header">
             {/*  Logo */}
-            <div className="w-full opacity-0 h-[10vh] xl:h-[20vh] xl:opacity-100">
+            <div className="w-full opacity-0 h-[10vh] xl:h-[20vh] xl:opacity-100 p-4 ">
                 <Image 
                     src={Logo} 
                     className ="m-auto w-full h-auto"
@@ -103,14 +103,14 @@ const Header = () => {
                     alt="Logo"
                     quality={100}
                     unoptimized/>
-                <h1 className="m-auto text-xs2 text-primary transition-colors duration-1000 ease-in-out">
+                <h1 className="mt-2 m-auto text-xs text-primary transition-colors duration-1000 ease-in-out">
                     rileywongwong @gmail.com
                 </h1>
             </div>
 
             {/*  Page Redirections */}
             <nav className="w-full h-2/3 xl:h-auto flex flex-col ">
-                <Link className="w-full h-1/5 xl:h-[50px] content-center p-4 xl:p-0
+                <Link className="w-full h-1/5 xl:h-[50px] content-center p-4 xl:p-2
                     perspective-distant group transition-colors duration-1000 ease-in-out" 
                     href="/"
                     id="HeaderHome"> 
@@ -132,7 +132,7 @@ const Header = () => {
                         </div>
                     </div>
                 </Link>
-                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-0
+                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-2
                     transition-colors duration-1000 ease-in-out" 
                     href="/About"
                     id="HeaderAbout"> 
@@ -155,7 +155,7 @@ const Header = () => {
                         </div>
                     </div>
                 </Link>
-                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-0
+                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-2
                     transition-colors duration-1000 ease-in-out" 
                     href="/Experience"
                     id="HeaderExperience"> 
@@ -177,7 +177,7 @@ const Header = () => {
                         </div>
                     </div>
                 </Link>
-                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-0
+                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-2
                     transition-colors duration-1000 ease-in-out" 
                     href="/Projects"
                     id="HeaderProjects">
@@ -199,7 +199,7 @@ const Header = () => {
                         </div>
                     </div> 
                 </Link>
-                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-0
+                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-2
                     transition-colors duration-1000 ease-in-out"
                     href="/Contact"
                     id="HeaderContact"> 
@@ -224,15 +224,15 @@ const Header = () => {
             </nav>
 
             {/*Social external links */}
-            <nav className="w-full h-1/10 xl:h-auto flex flex-row xl:flex-col space-y-3 space-x-3 -mx-3 xl:mx-0">
-                <a className="w-1/5 xl:w-full xl:h-[30px] group cursor-pointer p-3 xl:p-1 z-1"
-                    href="https://docs.google.com/document/d/1C5AbmvgPOqlUoBYgSuBjcOcLNpI1PlARaDBG_yKkMBU/edit?usp=drive_link"
+            <nav className="w-full h-1/10 xl:h-auto flex flex-row xl:flex-col space-y-3  xl:mx-0 ">
+                <a className="w-1/5 xl:w-full xl:h-[20px] group cursor-pointer p-3 xl:p-1 z-1"
+                    href="https://docs.google.com/document/d/1nGHDpZ9HvGR8FkzPURvtzzub3NPhHUgyPH-FS1WBxu0/preview"
                     target="_blank"
                     id="HeaderResume">  
                     <div className="w-full h-full hidden group-hover:block 
-                        transition-all duration-300 ease-in-out">
+                        transition-all duration-300 ease-in-out content-center">
                         <Image 
-                            className="m-auto h-full w-auto "
+                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
                             src="/ResumeColor.webp"
                             width={0} height={0}
                             quality={100}
@@ -240,9 +240,9 @@ const Header = () => {
                             unoptimized/>
                     </div>
                     <div className=" m-auto w-full h-full group-hover:hidden
-                        transition-all duration-100 ease-in-out">
+                        transition-all duration-100 ease-in-out content-center">
                         <Image 
-                            className="m-auto h-full w-auto"
+                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
                             src={Resume}
                             width={0} height={0}
                             quality={100}
@@ -250,13 +250,13 @@ const Header = () => {
                             unoptimized/>
                     </div>
                 </a>
-                <a className=" w-1/5 xl:w-full xl:h-[30px] group cursor-pointer p-3  xl:p-1 z-1"
+                <a className=" w-1/5 xl:w-full xl:h-[20px] group cursor-pointer p-3  xl:p-1 z-1"
                     href="https://github.com/RileyWong26"
                     target="_blank">
                     <div className="w-full h-full group-hover:block
-                        transition-opacity duration-300 ease-in-out hidden">
+                        transition-opacity duration-300 ease-in-out hidden content-center">
                         <Image 
-                            className="m-auto h-full w-auto"
+                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
                             src="/GitHubColor.webp"
                             width={0} height={0}
                             quality={100}
@@ -264,9 +264,9 @@ const Header = () => {
                             unoptimized/>
                     </div>
                     <div className="w-full h-full 
-                        group-hover:hidden">
-                        <Image 
-                            className="m-auto h-full w-auto"
+                        group-hover:hidden content-center">
+                        <Image  
+                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
                             src={GitHub}
                             width={0} height={0}
                             quality={100}
@@ -274,43 +274,43 @@ const Header = () => {
                             unoptimized/>
                     </div>
                 </a>
-                <a className="w-1/5 xl:w-full xl:h-[30px] group cursor-pointer p-3 xl:p-1 z-1"
+                <a className="w-1/5 xl:w-full xl:h-[20px] group cursor-pointer p-3 xl:p-1 z-1"
                     href="//www.linkedin.com/in/riley-wong-1051b2250"
                     target="_blank">
                     <div className=" w-full h-full group-hover:block hidden
-                        transition-opacity duration-300 ease-in-out">
+                        transition-opacity duration-300 ease-in-out content-center">
                         <Image 
-                            className="m-auto h-full w-auto"
+                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
                             src="/LinkedInColor.webp"
                             width={0} height={0}
                             alt="LinkedInColor"
                             unoptimized/>
                     </div>
                     <div className=" w-full h-full group-hover:hidden
-                        transition-opacity duration-100 ease-in-out">
+                        transition-opacity duration-100 ease-in-out content-center">
                         <Image 
-                            className="m-auto h-full w-auto"
+                            className="m-auto w-full h-auto xl:w-auto xl:h-full"
                             src={LinkedIn}
                             width={0} height={0}
                             alt="LinkedIn"
                             unoptimized/>
                     </div>
                 </a>
-                <a className="w-1/5 xl:w-full xl:h-[30px] group cursor-pointer p-3 xl:p-1 z-1"
+                <a className="w-1/5 xl:w-full xl:h-[20px] group cursor-pointer p-3 xl:p-1 z-1"
                     href="https://ryebread26.itch.io"
                     target="_blank">
                     <div className="m-auto w-full h-full hidden group-hover:block
-                            transition-opacity duration-300 ease-in-out">
+                            transition-opacity duration-300 ease-in-out content-center">
                             <Image 
-                                className="m-auto h-full w-auto"
+                                className="m-auto h-auto w-full xl:w-auto xl:h-full"
                                 src="/ItchIoColor.webp"
                                 width={0} height={0}
                                 alt="ItchIoColor"
                                 unoptimized/>
                     </div>
-                    <div className="m-auto w-full h-full group-hover:hidden">
+                    <div className="m-auto w-full h-full group-hover:hidden content-center">
                         <Image 
-                            className="m-auto h-full w-auto"
+                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
                             src={ItchIo}
                             width={0} height={0}
                             alt="ItchIo"
@@ -330,18 +330,18 @@ const Header = () => {
                         ]}
                         }>
                     <div className="m-auto w-full h-full hidden group-hover:block
-                        transition-opacity duration-300 ease-in-out">
+                        transition-opacity duration-300 ease-in-out content-center">
                         <Image 
-                            className="m-auto h-full w-auto"
+                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
                             src={ModeColor}
                             width={0} height={0}
                             alt="ThemeColor"
                             unoptimized/>
                     </div>
                     <div className="w-full h-full group-hover:hidden
-                        transition-opacity duration-100 ease-in-out">
+                        transition-opacity duration-100 ease-in-out content-center">
                         <Image 
-                            className="m-auto h-full w-auto"
+                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
                             src={Mode}
                             width={0} height={0}
                             alt="Theme"
