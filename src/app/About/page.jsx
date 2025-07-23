@@ -1,6 +1,7 @@
 import Header from "@/app/header";
 import Image from "next/image";
 import HeaderButton from "../headerbutton";
+import Link from "next/link";
 
 export default async function About(){
     return (
@@ -11,7 +12,7 @@ export default async function About(){
                 {/*Page Title */}
                 <h1 className="text-hightlight h-[15vh] font-bold text-2xl xl:text-3xl w-4/5 mx-auto content-end ">About Me</h1>
                 {/*Page content */}
-                <section className="w-full flex flex-col-reverse xl:flex-row py-10 space-y-5 h-auto ">
+                <section className="w-full flex flex-col-reverse xl:flex-row py-10 space-y-5 h-[80vh] content-center ">
                     {/* Left side text*/}
                     <div className="mx-auto w-full min-h-[50vh] xl:h-full ">
                         <div className="xl:ml-auto xl:mr-0 m-auto w-4/5 h-full flex flex-col space-y-8 xl:space-y-12 justify-center">
@@ -21,22 +22,37 @@ export default async function About(){
                         </div>
                     </div>
                     {/*Right side Image and description */}
-                    <div className="mx-auto w-full min-h-[33vh] xl:h-[50vh] animate-pullup ">
+                    <div className="mx-auto w-full min-h-[33vh] xl:min-h-[50vh] animate-pullup content-center ">
                         <div className="w-full min-h-[33vh] perspective-distant content-center">
                             <div className="w-3/4 h-8/10 xl:w-2/3 relative transform-3d m-auto rounded-2xl 
                                 transition-all duration-1000 ease-in-out xl:rotate-x-5 xl:rotate-y-20 scale-95 hover:-rotate-x-15 
                                 hover:-rotate-y-25 hover:scale-120 hover:-translate-y-5"> 
                                 <Image className="m-auto rounded-2xl h-full w-auto xl:w-full xl:h-auto"
                                     src="/Images/GDSxLOJAM1.webp"
-                                    width={0} height={0}
+                                    width={1000} height={1000}
                                     quality={100}
-                                    alt="AboutMeImage"
-                                    unoptimized/>
+                                    alt="AboutMeImage"/>
                             </div>
                             <h1 className=" w-3/4 m-auto text-center mt-5 text-xs xl:text-sm"> Picture of me,(left most), and my friends winning the 2025 LoJam X GDS Game Jam</h1>
                         </div>
                     </div>
                 </section>
+                <Link className="xl:pl-34 pl-14 text-primary w-8/9 xl:w-1/2 xl:-translate-y-20 flex flex-row text-xl space-x-4 content-center h-6"
+                    href="/Experience"> 
+                    <h1 className="content-center">
+                        EXPERIENCE
+                    </h1>
+                    <Image 
+                        className="my-auto h-3/5 w-auto hidden dark:inline animate-bounceright"
+                        width={1000} height={1000}
+                        alt="Dark Mode Right Arrow"
+                        src={"/DarkMode/RightArrow.webp"}/>
+                        <Image 
+                        className="my-auto h-3/5 w-auto dark:hidden animate-bounceright"
+                        width={1000} height={1000}
+                        alt="Light Mode Right Arrow"
+                        src={"/LightMode/RightArrow.webp"}/>
+                </Link>
             </div>
         
         </section>
