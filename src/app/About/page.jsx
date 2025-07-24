@@ -10,34 +10,34 @@ export default async function About(){
             <HeaderButton />
             <div className="w-full flex flex-col animate-pullup min-h-screen ">
                 {/*Page Title */}
-                <h1 className="text-hightlight h-[15vh] font-bold text-2xl xl:text-3xl w-4/5 mx-auto content-end ">About Me</h1>
+                <h1 className="text-hightlight h-[15vh] font-bold text-3xl w-4/5 mx-auto content-end ">About Me</h1>
                 {/*Page content */}
-                <section className="w-full flex flex-col-reverse xl:flex-row py-10 space-y-5 h-[80vh] content-center ">
+                <section className="w-full flex flex-col-reverse lg:flex-row py-10 space-y-5 lg:h-[80vh] content-center ">
                     {/* Left side text*/}
-                    <div className="mx-auto w-full min-h-[50vh] xl:h-full ">
-                        <div className="xl:ml-auto xl:mr-0 m-auto w-4/5 h-full flex flex-col space-y-8 xl:space-y-12 justify-center">
-                            <h1 className="text-xs xl:text-base leading-6">Hi! My name is Riley Wong, I am a developer passionate about creating robust software.  My love for developing started from creating both mods and games at age 10.  </h1>
-                            <h1 className="text-xs xl:text-base leading-6">I am a team player who communicates effectively, faces problems critically and has the technical skills to tackle problems.  </h1>
-                            <h1 className="text-xs xl:text-base leading-6">I am also passionate about music, and love to listen, play guitar and sing.</h1>
+                    <div className="mx-auto w-full lg:min-h-[50vh] lg:h-full ">
+                        <div className="lg:ml-auto lg:mr-0 m-auto w-4/5 h-full flex flex-col space-y-8 lg:space-y-12 justify-center">
+                            <h1 className="text-base leading-6">Hi! My name is Riley Wong, I am a developer passionate about creating robust software.  My love for developing started from creating both mods and games at age 10.  </h1>
+                            <h1 className="text-base leading-6">I am a team player who communicates effectively, faces problems critically and has the technical skills to tackle problems.  </h1>
+                            <h1 className="text-base leading-6">I am also passionate about music, and love to listen, play guitar and sing.</h1>
                         </div>
                     </div>
                     {/*Right side Image and description */}
-                    <div className="mx-auto w-full min-h-[33vh] xl:min-h-[50vh] animate-pullup content-center ">
+                    <div className="mx-auto w-full min-h-[33vh] lg:min-h-[50vh] animate-pullup content-center ">
                         <div className="w-full min-h-[33vh] perspective-distant content-center">
-                            <div className="w-3/4 h-8/10 xl:w-2/3 relative transform-3d m-auto rounded-2xl 
-                                transition-all duration-1000 ease-in-out xl:rotate-x-5 xl:rotate-y-20 scale-95 hover:-rotate-x-15 
+                            <div className="w-3/4 h-8/10 lg:w-2/3 relative transform-3d m-auto rounded-2xl 
+                                transition-all duration-1000 ease-in-out lg:rotate-x-5 lg:rotate-y-20 scale-95 hover:-rotate-x-15 
                                 hover:-rotate-y-25 hover:scale-120 hover:-translate-y-5"> 
-                                <Image className="m-auto rounded-2xl h-full w-auto xl:w-full xl:h-auto"
+                                <Image className="m-auto rounded-2xl h-full w-auto lg:w-full lg:h-auto"
                                     src="/Images/GDSxLOJAM1.webp"
                                     width={1000} height={1000}
                                     quality={100}
                                     alt="AboutMeImage"/>
                             </div>
-                            <h1 className=" w-3/4 m-auto text-center mt-5 text-xs xl:text-sm"> Picture of me,(left most), and my friends winning the 2025 LoJam X GDS Game Jam</h1>
+                            <h1 className=" w-3/4 m-auto text-center mt-5 text-sm"> Picture of me,(left most), and my friends winning the 2025 LoJam X GDS Game Jam</h1>
                         </div>
                     </div>
                 </section>
-                <Link className="xl:pl-34 pl-14 text-primary w-8/9 xl:w-1/2 xl:-translate-y-20 flex flex-row text-xl space-x-4 content-center h-6"
+                <Link className="lg:pl-34 pl-14 text-primary w-8/9 lg:w-1/2 lg:-translate-y-20 flex flex-row text-xl space-x-4 content-center h-6"
                     href="/Experience"> 
                     <h1 className="content-center">
                         EXPERIENCE
@@ -54,7 +54,6 @@ export default async function About(){
                         src={"/LightMode/RightArrow.webp"}/>
                 </Link>
             </div>
-        
         </section>
     )
 }
