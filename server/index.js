@@ -1,7 +1,6 @@
 const nodemailer = require("nodemailer");
 const express = require("express");
 const app = express();
-const request = require("request");
 const process = require("process");
 const dotenv = require("dotenv").config({path: "./.env"});
 
@@ -28,6 +27,7 @@ app.use((req, res, next) => {
 // Post request to send email
 app.post("/test", (req, res) => {
     const body = req.body;
+    console.log(body);
     const name = body.name;
     const email = body.email;
     const subject = body.subject;
@@ -50,15 +50,8 @@ app.post("/test", (req, res) => {
     else{
         res.status(400).json({msg: "Error occured before sending the mail.  Possibly check the inputs are filled in."});
     }
-})
 
-
-app.listen(port, () => {
-    console.log(`Server running at ${hostname}:${port}`);
-})
-
-
-async function sendMail(name, email, subject, message){
+    async function sendMail(name, email, subject, message){
     // Initalize the transporter, 
     // The email account that sends the mail
     let transporter = nodemailer.createTransport({
@@ -78,6 +71,18 @@ async function sendMail(name, email, subject, message){
     
     // Send the mail
     transporter.sendMail(mailOptions)
-        .then((info) => {console.log(info.response)})
-        .catch((error => {console.log(error)}));
+        .then((info) => {
+            console.log(info.response);
+        })
+        .catch((error) => {
+            res.status(400).json({msg:"Error Sending Message"});
+        });
 }
+})
+
+
+app.listen(port, () => {
+    console.log(`Server running at ${hostname}:${port}`);
+})
+
+
