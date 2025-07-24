@@ -45,6 +45,11 @@ export default function Three(){
         // Orbit
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.update();
+        // Max vertical angle
+        controls.maxPolarAngle = Math.PI / 2;
+        // Max / min horizontal angle
+        controls.maxAzimuthAngle = Math.PI;
+        controls.minAzimuthAngle = Math.PI * -1;
 
         // Load Model
         const loader = new GLTFLoader();
@@ -62,7 +67,7 @@ export default function Three(){
             mixer = new THREE.AnimationMixer(person);
             const clips = model.animations;
             mixer.clipAction(clips[0]).play();
-            mixer.update(deltaTime);
+            mixer.update(0.02);
 
         }, undefined, function(error){
             console.log(error);
