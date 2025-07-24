@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Header from "@/app/header";
-import Head from "next/head";
 import Three from "./three";
 import HeaderButton from "./headerbutton";
 import { Suspense } from "react";
@@ -15,21 +14,21 @@ export default async function Home() {
       <Header />
       <HeaderButton />
 
-      <section className="w-full max-w-screen min-h-screen h-screen flex flex-col justify-evenly ">
+      <section className="w-full max-w-screen min-h-screen h-screen flex flex-col justify-evenly animate-pullup">
         <div className="w-full flex flex-col xl:flex-row justify-evenly content-center h-9/10">
           {/* Left Text*/}
-          <div className="w-full xl:w-4/5 max-w-screen h-1/2 xl:h-auto my-auto content-end xl:content-center animate-pullup">
+          <div className="w-full xl:w-4/5 max-w-screen h-1/2 xl:h-auto my-auto content-end xl:content-center ">
               <h1 className="m-auto text-primary w-3/4 leading-15 font-bold text-3xl animate-glitchtext ">
                 Hi <br /> 
                 I'm Riley Wong <br/> 
                 Software Engineer
               </h1>
               <h1 className="m-auto  text-text2 w-3/4 text-lg ">
-                Honours Computer science, 2029, Western University
+                Honors Computer science, 2029, Western University
               </h1>
           </div>
           {/* Right side hero 3d model*/}
-          <div className="w-4/5 content-center animate-pullup overflow-clip m-auto h-1/2 xl:h-auto"
+          <div className="w-4/5 content-center overflow-clip m-auto h-1/2 xl:h-auto"
             id="HeroSection">
               <Suspense fallback={<Loading />}>
                 <Three />
