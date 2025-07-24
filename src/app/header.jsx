@@ -91,14 +91,14 @@ const Header = () => {
 
 
     return (
-        <nav className="absolute bg-background2 h-screen w-screen xl:max-w-30 text-center flex flex-col justify-between z-10
-            transition-all duration-1000 ease-in-out xl:sticky top-0 -translate-y-full xl:translate-y-0"
+        <nav className="absolute bg-background2 h-screen w-screen lg:max-w-30 text-center flex flex-col justify-between z-10
+            transition-all duration-1000 ease-in-out lg:sticky top-0 -translate-y-full lg:translate-y-0"
             id="Header">
             {/*  Logo */}
-            <div className="w-full opacity-0 h-[10vh] xl:h-[20vh] xl:opacity-100 p-4 ">
+            <div className="w-full opacity-0 h-[10vh] lg:h-[20vh] lg:opacity-100 p-4 ">
                 <Image 
                     src={Logo} 
-                    className ="m-auto w-full h-auto"
+                    className ="m-auto w-4/5 h-auto"
                     width={0} height={0}
                     alt="Logo"
                     quality={100}
@@ -109,16 +109,16 @@ const Header = () => {
             </div>
 
             {/*  Page Redirections */}
-            <nav className="w-full h-2/3 xl:h-auto flex flex-col ">
-                <Link className="w-full h-1/5 xl:h-[50px] content-center p-4 xl:p-2
+            <nav className="w-full h-2/3 lg:h-auto flex flex-col ">
+                <Link className="w-full h-1/5 lg:h-[50px] content-center p-4 lg:p-2
                     perspective-distant group transition-colors duration-1000 ease-in-out" 
                     href="/"
                     id="HeaderHome"> 
                     <div className="h-full w-full flex flex-row space-x-4 
-                        xl:relative xl:transform-3d xl:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
-                        <div className="h-full w-1/3 xl:w-full xl:absolute xl:backface-hidden ">
+                        lg:relative lg:transform-3d lg:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
+                        <div className="h-full w-1/3 lg:w-full lg:absolute lg:backface-hidden content-center ">
                             <Image
-                                className="m-auto h-full w-auto "
+                                className="m-auto h-3/5 lg:h-full w-auto "
                                 src={Home}
                                 width={0} height={0}
                                 alt="Home"
@@ -126,22 +126,22 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                         </div>
-                        <div className="content-center text-hightlight text-2xl xl:w-full 
-                            xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base"> 
+                        <div className="content-center text-hightlight text-2xl lg:w-full 
+                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto lg:backface-hidden lg:text-base"> 
                             HOME
                         </div>
                     </div>
                 </Link>
-                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-2
+                <Link className="w-full h-1/5 lg:h-[50px] content-center perspective-distant group p-4 lg:p-2
                     transition-colors duration-1000 ease-in-out" 
                     href="/About"
                     id="HeaderAbout"> 
                     <div className="h-full w-full flex flex-row space-x-4 
-                        xl:relative xl:transform-3d xl:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
-                        <div className="h-full w-1/3 xl:w-full xl:absolute xl:backface-hidden ">
+                        lg:relative lg:transform-3d lg:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
+                        <div className="h-full w-1/3 lg:w-full lg:absolute lg:backface-hidden content-center">
                         
                             <Image
-                                className="m-auto h-full w-auto"
+                                className="m-auto h-3/5 lg:h-full w-auto"
                                 src={About}
                                 width={0} height={0}
                                 alt="About Me"
@@ -149,21 +149,21 @@ const Header = () => {
                                 unoptimized/>
                         
                         </div>
-                        <div className="content-center text-hightlight text-2xl xl:w-full
-                            xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base">
+                        <div className="content-center text-hightlight text-2xl lg:w-full
+                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto lg:backface-hidden lg:text-base">
                             ABOUT
                         </div>
                     </div>
                 </Link>
-                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-2
+                <Link className="w-full h-1/5 lg:h-[50px] content-center perspective-distant group p-4 lg:p-2
                     transition-colors duration-1000 ease-in-out" 
                     href="/Experience"
                     id="HeaderExperience"> 
                     <div className="h-full w-full flex flex-row space-x-4 
-                        xl:relative xl:transform-3d xl:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
-                        <div className="h-full w-1/3 xl:w-full xl:absolute xl:backface-hidden">
+                        lg:relative lg:transform-3d lg:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
+                        <div className="h-full w-1/3 lg:w-full lg:absolute lg:backface-hidden content-center">
                             <Image
-                                className="m-auto h-full w-auto"
+                                className="m-auto h-3/5 lg:h-full w-auto"
                                 src={Experience}
                                 width={0} height={0}
                                 alt="Experience"
@@ -171,21 +171,21 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                         </div>
-                        <div className="content-center text-hightlight text-2xl xl:w-full
-                            xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base">
+                        <div className="content-center text-hightlight text-2xl lg:w-full
+                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto lg:backface-hidden lg:text-base">
                             EXPERIENCE  
                         </div>
                     </div>
                 </Link>
-                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-2
+                <Link className="w-full h-1/5 lg:h-[50px] content-center perspective-distant group p-4 lg:p-2
                     transition-colors duration-1000 ease-in-out" 
                     href="/Projects"
                     id="HeaderProjects">
                     <div className="w-full h-full flex flex-row space-x-4 
-                        xl:relative xl:transform-3d xl:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
-                        <div className="h-full w-1/3 xl:w-full xl:absolute xl:backface-hidden">
+                        lg:relative lg:transform-3d lg:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
+                        <div className="h-full w-1/3 lg:w-full lg:absolute lg:backface-hidden content-center">
                             <Image
-                                className="m-auto h-full w-auto"
+                                className="m-auto h-3/5 lg:h-full w-auto"
                                 src={Projects}
                                 width={0} height={0}
                                 alt="Projects"
@@ -193,21 +193,21 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                         </div>
-                        <div className="text-hightlight content-center text-2xl xl:w-full 
-                            xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base">
+                        <div className="text-hightlight content-center text-2xl lg:w-full 
+                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto lg:backface-hidden lg:text-base">
                             PROJECTS
                         </div>
                     </div> 
                 </Link>
-                <Link className="w-full h-1/5 xl:h-[50px] content-center perspective-distant group p-4 xl:p-2
+                <Link className="w-full h-1/5 lg:h-[50px] content-center perspective-distant group p-4 lg:p-2
                     transition-colors duration-1000 ease-in-out"
                     href="/Contact"
                     id="HeaderContact"> 
                     <div className="h-full w-full flex flex-row space-x-4 
-                        xl:relative xl:transform-3d xl:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
-                        <div className="h-full w-1/3 xl:w-full xl:absolute xl:backface-hidden">
+                        lg:relative lg:transform-3d lg:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
+                        <div className="h-full w-1/3 lg:w-full lg:absolute lg:backface-hidden content-center">
                             <Image
-                                className="m-auto w-auto h-full"
+                                className="m-auto w-auto h-3/5 lg:h-full"
                                 src={Contact}
                                 width={0} height={0}
                                 alt="Contact"
@@ -215,8 +215,8 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                         </div>
-                        <div className="text-hightlight content-center text-2xl xl:w-full
-                            xl:h-full xl:absolute xl:rotate-y-180 xl:m-auto xl:backface-hidden xl:text-base">
+                        <div className="text-hightlight content-center text-2xl lg:w-full
+                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto lg:backface-hidden lg:text-base">
                             CONTACT
                         </div>
                     </div>
@@ -224,15 +224,15 @@ const Header = () => {
             </nav>
 
             {/*Social external links */}
-            <nav className="w-full h-1/10 xl:h-auto flex flex-row xl:flex-col space-y-3  xl:mx-0 ">
-                <a className="w-1/5 xl:w-full xl:h-[20px] group cursor-pointer p-3 xl:p-1 z-1"
+            <nav className="w-full h-1/10 lg:h-auto flex flex-row lg:flex-col space-y-3  lg:mx-0 ">
+                <a className="w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-1 z-1"
                     href="https://docs.google.com/document/d/1nGHDpZ9HvGR8FkzPURvtzzub3NPhHUgyPH-FS1WBxu0/preview"
                     target="_blank"
                     id="HeaderResume">  
                     <div className="w-full h-full hidden group-hover:block 
                         transition-all duration-300 ease-in-out content-center">
                         <Image 
-                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
+                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full"
                             src="/ResumeColor.webp"
                             width={0} height={0}
                             quality={100}
@@ -242,7 +242,7 @@ const Header = () => {
                     <div className=" m-auto w-full h-full group-hover:hidden
                         transition-all duration-100 ease-in-out content-center">
                         <Image 
-                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
+                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full"
                             src={Resume}
                             width={0} height={0}
                             quality={100}
@@ -250,13 +250,13 @@ const Header = () => {
                             unoptimized/>
                     </div>
                 </a>
-                <a className=" w-1/5 xl:w-full xl:h-[20px] group cursor-pointer p-3  xl:p-1 z-1"
+                <a className=" w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-1 z-1"
                     href="https://github.com/RileyWong26"
                     target="_blank">
                     <div className="w-full h-full group-hover:block
                         transition-opacity duration-300 ease-in-out hidden content-center">
                         <Image 
-                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
+                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full"
                             src="/GitHubColor.webp"
                             width={0} height={0}
                             quality={100}
@@ -266,7 +266,7 @@ const Header = () => {
                     <div className="w-full h-full 
                         group-hover:hidden content-center">
                         <Image  
-                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
+                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full"
                             src={GitHub}
                             width={0} height={0}
                             quality={100}
@@ -274,13 +274,13 @@ const Header = () => {
                             unoptimized/>
                     </div>
                 </a>
-                <a className="w-1/5 xl:w-full xl:h-[20px] group cursor-pointer p-3 xl:p-1 z-1"
+                <a className="w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-1 z-1"
                     href="//www.linkedin.com/in/riley-wong-1051b2250"
                     target="_blank">
                     <div className=" w-full h-full group-hover:block hidden
                         transition-opacity duration-300 ease-in-out content-center">
                         <Image 
-                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
+                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full"
                             src="/LinkedInColor.webp"
                             width={0} height={0}
                             alt="LinkedInColor"
@@ -289,20 +289,20 @@ const Header = () => {
                     <div className=" w-full h-full group-hover:hidden
                         transition-opacity duration-100 ease-in-out content-center">
                         <Image 
-                            className="m-auto w-full h-auto xl:w-auto xl:h-full"
+                            className="m-auto w-3/5 h-auto lg:w-auto lg:h-full"
                             src={LinkedIn}
                             width={0} height={0}
                             alt="LinkedIn"
                             unoptimized/>
                     </div>
                 </a>
-                <a className="w-1/5 xl:w-full xl:h-[20px] group cursor-pointer p-3 xl:p-1 z-1"
+                <a className="w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-1 z-1"
                     href="https://ryebread26.itch.io"
                     target="_blank">
                     <div className="m-auto w-full h-full hidden group-hover:block
                             transition-opacity duration-300 ease-in-out content-center">
                             <Image 
-                                className="m-auto h-auto w-full xl:w-auto xl:h-full"
+                                className="m-auto h-auto w-3/5 lg:w-auto lg:h-full"
                                 src="/ItchIoColor.webp"
                                 width={0} height={0}
                                 alt="ItchIoColor"
@@ -310,7 +310,7 @@ const Header = () => {
                     </div>
                     <div className="m-auto w-full h-full group-hover:hidden content-center">
                         <Image 
-                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
+                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full"
                             src={ItchIo}
                             width={0} height={0}
                             alt="ItchIo"
@@ -318,7 +318,7 @@ const Header = () => {
                     </div>
                 </a>
                 {/* Theme button */}
-                <div className="w-1/5 xl:w-full xl:h-[40px] relative group cursor-pointer z-1"
+                <div className="w-1/5 lg:w-full lg:h-[40px] relative group cursor-pointer z-1"
                     id="HeaderTheme"
         
                     onClick={() => {[
@@ -332,7 +332,7 @@ const Header = () => {
                     <div className="m-auto w-full h-full hidden group-hover:block
                         transition-opacity duration-300 ease-in-out content-center">
                         <Image 
-                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
+                            className="m-auto h-auto w-4/5 lg:w-auto lg:h-full"
                             src={ModeColor}
                             width={0} height={0}
                             alt="ThemeColor"
@@ -341,7 +341,7 @@ const Header = () => {
                     <div className="w-full h-full group-hover:hidden
                         transition-opacity duration-100 ease-in-out content-center">
                         <Image 
-                            className="m-auto h-auto w-full xl:w-auto xl:h-full"
+                            className="m-auto h-auto w-4/5 lg:w-auto lg:h-full"
                             src={Mode}
                             width={0} height={0}
                             alt="Theme"
@@ -351,16 +351,16 @@ const Header = () => {
                 </div>
             </nav>
             {/*Mobile only contact information */}
-            <section className="w-full h-[13%] flex flex-row xl:hidden content-center space-x-5 p-4">
-                <div className="w-1/3 h-full">
+            <section className="w-full h-[13%] flex flex-row lg:hidden content-center space-x-5 p-4">
+                <div className="w-1/3 h-full content-center">
                     <Image 
-                        className="m-auto h-full w-auto hidden dark:block"
+                        className="m-auto h-3/5 w-auto hidden dark:block"
                         src={"/DarkMode/MailDark.webp"}
                         height={0} width={0}
                         alt={"MailContactDark"}
                         unoptimized/>
                     <Image 
-                        className="ml-auto h-full w-auto dark:hidden"
+                        className="ml-auto h-3/5 w-auto dark:hidden"
                         src={"/LightMode/MailLight.webp"}
                         height={0} width={0}
                         alt={"MailContactLight"}
