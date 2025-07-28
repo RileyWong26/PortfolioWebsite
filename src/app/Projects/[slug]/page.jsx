@@ -8,16 +8,19 @@ function Attachment({details}){
     const video = details.Video;
     const image = details.Image;
     return(
-        <div className="h-[40vh] ">
+        <div className="lg:h-[40vh] w-full content-center">
             {(image === undefined) ? 
                 <iframe 
-                    className="h-full w-auto m-auto"
-                    src={video}/> :
+                    className="h-auto w-full lg:h-full lg:w-auto m-auto "
+                    src={video}/> 
+                    :
                 <Image 
-                    className="h-full w-auto m-auto"
+                    className="h-auto w-full lg:h-full lg:w-auto m-auto"
                     src={image} 
-                    height={0} width={0}
-                    unoptimized/>
+                    width={1000} height={1000}
+                    priority={true}
+                    quality={100}
+                    placeholder="empty"/>
             }
         </div>
     )
@@ -69,21 +72,22 @@ export default async function Page({params}){
             <Header />
             <HeaderButton />
             <div id="ProjectDetails"
-                className="w-1/2 mx-auto mb-12 mt-12 space-y-6 flex flex-col animate-pullup ">
-                <div className="h-[33vh]">
+                className="w-4/5 lg:w-1/2 mx-auto mb-12 mt-12 space-y-6 flex flex-col animate-pullup ">
+                <div className="h-[33vh] w-full content-center">
                     {(image === undefined) ? null : 
-                    <Image className="m-auto rounded-2xl h-full w-auto"
+                    <Image className="m-auto rounded-2xl h-auto w-full lg:h-full lg:w-auto"
                             alt="Image of work"
                             src={image}
-                            width={0} height={0}
+                            width={1000} height={1000}
+                            priority={true}
                             quality={100}
-                            unoptimized/>
+                            placeholder="empty"/>
                     }
                 </div>
                 <a className=" flex flex-row h-14 w-full space-x-2 group cursor-pointer" 
                     href={(link === undefined) ? null : link}
                     target="_blank">
-                    <h1 className="text-primary font-bold text-base xl:text-xl h-full content-center ">
+                    <h1 className="text-primary font-bold text-xl h-full content-center ">
                         {pageName}
                     </h1>
                     {(link === undefined) ? null :
@@ -95,7 +99,7 @@ export default async function Page({params}){
                                 width={0} height={0}
                                 quality={100}
                                 unoptimized/>
-                            <Image className="h-full w-auto  dark:hidden"
+                            <Image className="h-full w-auto dark:hidden"
                                 alt="Arrow To Company"
                                 src="/LightMode/GitHubLight.webp"
                                 width={0} height={0}
@@ -105,23 +109,23 @@ export default async function Page({params}){
                     }
                 </a>
                 <div>
-                    <h1 className="text-primary font-bold text-sm xl:text-lg">
+                    <h1 className="text-primary font-bold text-lg">
                         DATE
                     </h1>
-                    <h1 className="text-xs text-primary xl:text-base">
+                    <h1 className="text-primary text-base">
                         {startDate} {(endDate != undefined) ? "-": ""} {endDate}
                     </h1>
                 </div>
                 <div>
-                    <h1 className="text-primary font-bold text-sm xl:text-lg">
+                    <h1 className="text-primary font-bold text-lg">
                         DESCRIPTION
                     </h1>
-                    <h1 className="text-xs xl:text-base text-primary whitespace-pre-line">
+                    <h1 className="text-base text-primary whitespace-pre-line">
                         {description}
                     </h1>
                 </div>
                 <div>
-                    <h1 className="text-primary font-bold text-sm xl:text-lg">
+                    <h1 className="text-primary font-bold text-lg">
                         TECHNOLOGIES
                     </h1>
                     <div className="flex flex-row space-x-2 flex-wrap gap-1">
@@ -136,7 +140,7 @@ export default async function Page({params}){
                 </div>
                 {(attachments === undefined) ? null : 
                     <div className="flex flex-col gap-2">
-                        <h1 className="text-primary font-bold text-sm xl:text-lg">
+                        <h1 className="text-primary font-bold text-lg">
                             ATTACHMENTS
                         </h1> 
                         {attachments.map((item, index) => {
