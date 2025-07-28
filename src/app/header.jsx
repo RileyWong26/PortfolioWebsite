@@ -70,7 +70,10 @@ const Header = () => {
         setTheme(newTheme);
         localStorage.theme = newTheme;
 
-        document.documentElement.classList.toggle("dark");
+        (newTheme === "Dark") ? 
+            document.documentElement.classList.add("dark")
+                :
+            document.documentElement.classList.remove("dark"); 
 
     };
 
