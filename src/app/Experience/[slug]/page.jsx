@@ -16,8 +16,10 @@ function Attachment({details}){
                 <Image 
                     className="h-full w-auto m-auto"
                     src={image} 
-                    height={0} width={0}
-                    unoptimized/>
+                    fill
+                    priority={true}
+                    quality={100}
+                    placeholder="empty"/>
             }
         </div>
     )
@@ -68,21 +70,24 @@ export default async function Page({params}){
             <Header />
             <HeaderButton />
             <div id="ExperienceDetails"
-                className="w-1/2 mx-auto mb-auto mt-5 space-y-6 flex flex-col animate-pullup">
-                <div className="h-[33vh] w-full content-center">
+                className="w-4/5 lg:w-1/2 mx-auto mb-auto mt-5 space-y-6 flex flex-col animate-pullup">
+                {/*Main image */}
+                <div className="h-[33vh] w-full content-center relative ">
                     {(image === undefined) ? null : 
-                    <Image className="m-auto rounded-2xl w-full h-auto xl:h-full xl:w-auto"
+                    <Image className="m-auto rounded-2xl w-full h-auto lg:h-full lg:w-auto"
                             alt="Image of work"
-                            width={0} height={0}
+                            width={1000} height={1000}
                             src={image}
+                            priority={true}
                             quality={100}
-                            unoptimized/>
+                            placeholder="empty"/>
                     }
                 </div>
+                {/* Link to company*/}
                 <a className=" flex flex-row h-14 w-1/2 space-x-2 group cursor-pointer" 
                     href={(link === undefined) ? null : link}
                     target="_blank">
-                    <h1 className="text-primary font-bold text-base xl:text-xl h-full content-center my-auto">
+                    <h1 className="text-primary font-bold text-xl h-full content-center my-auto">
                         {pageName}
                     </h1>
                     {(link === undefined) ? null :
@@ -103,22 +108,24 @@ export default async function Page({params}){
                         </div>
                     }
                 </a>
+                {/* Added on details*/}
                 <div>
-                    <h1 className="text-primary font-bold text-sm xl:text-lg">
+                    <h1 className="text-primary font-bold text-lg">
                         DATE
                     </h1>
-                    <h1 className="text-xs xl:text-base text-primary">
+                    <h1 className="text-base text-primary">
                         {startDate} {(endDate === undefined) ? "": "-"} {endDate}
                     </h1>
                 </div>
                 <div>
-                    <h1 className="text-primary font-bold text-sm xl:text-lg">
+                    <h1 className="text-primary font-bold text-lg">
                         DESCRIPTION
                     </h1>
-                    <h1 className=" text-xs xl:text-base text-primary whitespace-pre-line">
+                    <h1 className="text-base text-primary whitespace-pre-line">
                         {description}
                     </h1>
                 </div>
+                {/* Technology tags*/}
                 <div>
                     <h1 className="text-primary font-bold text-lg">
                         TECHNOLOGIES
@@ -132,9 +139,10 @@ export default async function Page({params}){
                         })}
                     </div>
                 </div>
+                {/* Check if there are any more attachments*/}
                 {(attachments === undefined) ? null : 
                     <div className="flex flex-col gap-2">
-                        <h1 className="text-primary font-bold text-sm xl:text-lg">
+                        <h1 className="text-primary font-bold text-lg">
                             ATTACHMENTS
                         </h1> 
                         {attachments.map((item, index) => {
