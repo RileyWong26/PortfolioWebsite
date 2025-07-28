@@ -4,7 +4,7 @@ import Image from "next/image";
  const HeaderButton = () =>{
     return(
         <button className="h-[60px] mt-2 aspect-square ml-auto bg-background2 rounded-4xl flex flex-col z-10
-            space-y-2 content-center group left-3/4 fixed xl:hidden transition-all duration-1000 ease-in-out"
+            space-y-2 content-center group left-3/4 fixed lg:hidden transition-all duration-1000 ease-in-out"
                 id="HeaderButton"
                 onClick={() => {
                     document.getElementById("HeaderButton").classList.toggle("open");
