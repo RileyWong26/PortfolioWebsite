@@ -10,25 +10,25 @@ export default async function Home() {
 
   return (
     <section className="bg-background1 w-screen min-h-screen font-Anonymous 
-      transition-colors duration-1000 ease-in-out flex flex-col xl:flex-row space-x-2 relative">
+      transition-colors duration-1000 ease-in-out flex flex-col lg:flex-row space-x-2 relative">
       <Header />
       <HeaderButton />
 
       <section className="w-full max-w-screen min-h-screen h-screen flex flex-col justify-evenly animate-pullup">
-        <div className="w-full flex flex-col xl:flex-row justify-evenly content-center h-9/10">
+        <div className="w-full flex flex-col lg:flex-row justify-evenly content-center h-9/10">
           {/* Left Text*/}
-          <div className="w-full xl:w-4/5 max-w-screen h-1/2 xl:h-auto my-auto content-end xl:content-center ">
+          <div className="w-full lg:w-4/5 max-w-screen h-1/2 lg:h-auto my-auto content-end lg:content-center ">
               <h1 className="m-auto text-primary w-3/4 leading-15 font-bold text-3xl animate-glitchtext ">
                 Hi <br /> 
                 I'm Riley Wong <br/> 
                 Software Engineer
               </h1>
               <h1 className="m-auto  text-text2 w-3/4 text-lg ">
-                Honors Computer science, 2029, Western University
+                I build user-based, innovative, and versatile software applications
               </h1>
           </div>
           {/* Right side hero 3d model*/}
-          <div className="w-4/5 content-center overflow-clip m-auto h-1/2 xl:h-auto"
+          <div className="w-4/5 content-center overflow-clip m-auto h-1/2 lg:h-auto"
             id="HeroSection">
               <Suspense fallback={<Loading />}>
                 <Three />
@@ -37,7 +37,7 @@ export default async function Home() {
           
            
         </div>
-        <Link className="xl:pl-22 md:pl-18 pl-14 text-primary w-8/9 xl:w-1/2 xl:-translate-y-40 flex flex-row text-xl space-x-4 content-center h-6"
+        <Link className="lg:pl-22 md:pl-18 pl-14 text-primary w-8/9 xl:w-1/2 lg:-translate-y-40 flex flex-row text-xl space-x-4 content-center h-6"
             href="/About"> 
           <h1 className="content-center">
             ABOUT ME
