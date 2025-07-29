@@ -37,7 +37,7 @@ export default async function Home() {
           
            
         </div>
-        <Link className="xl:pl-22 pl-14 text-primary w-8/9 xl:w-1/2 xl:-translate-y-40 flex flex-row text-xl space-x-4 content-center h-6"
+        <Link className="xl:pl-22 md:pl-18 pl-14 text-primary w-8/9 xl:w-1/2 xl:-translate-y-40 flex flex-row text-xl space-x-4 content-center h-6"
             href="/About"> 
           <h1 className="content-center">
             ABOUT ME
