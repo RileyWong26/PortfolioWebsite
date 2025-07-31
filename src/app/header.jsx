@@ -38,7 +38,6 @@ const Header = () => {
     useEffect(() => {
 
         const section = window.location.pathname.split("/")[1];
-        console.log(window.location.pathname);
 
         changeSection(section);
 
