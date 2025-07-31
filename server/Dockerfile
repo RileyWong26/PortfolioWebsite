@@ -1,6 +1,8 @@
 FROM node:23-alpine
+# add curl for end point health check
+RUN apk add --no-cache curl
 
-WORKDIR /
+WORKDIR /server
 
 COPY package*.json ./
 
