@@ -1,5 +1,3 @@
-import { getFirestore , getDoc, doc, getDocFromCache, getDocFromServer} from "firebase/firestore";
-import { initializeApp } from "firebase/app";
 import Header from "@/app/header";
 import Image from "next/image";
 import HeaderButton from "@/app/headerbutton";
@@ -38,34 +36,22 @@ export default async function Page({params}){
     // Get the title of the doc
     const {slug} = await params;
     const pageName = slug.replaceAll("%20", " ");
+
     // Fetch data from server
-    const firebaseConfig = {
-        apiKey: process.env.apiKey,
-        authDomain: process.env.authDomain,
-        projectId: process.env.projectId,
-        storageBucket: process.env.storageBucket,
-        messagingSenderId: process.env.messagingSenderId,
-        appId: process.env.appId,
-        measurementId: process.env.measurementId,
-    };
-    // Initalize app and database
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
+    const projectData = await fetch (`http://backend:9000/projectdetail?project=${pageName}`, {
+        method: 'GET',
+    })
+        .then((res) => {return res.json()})
+        .then((data) => {return data[pageName]})
+        .catch((err) => {console.log(err)});
 
-    // Call Reference to the doc, Then snapshot
-    const docRef = doc(db, "Projects", pageName);
-    const docSnap = await getDoc(docRef);
-
-    // Set data
-    const data = docSnap.data();
-
-    const image = data.Image;
-    const link = data.Link;
-    const startDate = data.StartDate;
-    const endDate = data.EndDate;
-    const tags = data.Tags;
-    const description = data.Description2;
-    const attachments = data.ExtraAttachments;
+    const image = projectData.Image;
+    const link = projectData.Link;
+    const startDate = projectData.StartDate;
+    const endDate = projectData.EndDate;
+    const tags = projectData.Tags;
+    const description = projectData.Description2;
+    const attachments = projectData.ExtraAttachments;
 
     return(
         <div className="bg-background1 min-h-screen relative flex flex-row">
