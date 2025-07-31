@@ -18,7 +18,6 @@ export default function Contact() {
         const EmailStatus = document.getElementById("EmailStatus");
         await fetch("http://127.0.0.1:9000/email", {
             method: 'POST',
-            mode: 'cors',
             body: JSON.stringify({
                 name: name,
                 email: email,
