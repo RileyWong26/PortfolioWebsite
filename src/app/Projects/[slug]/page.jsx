@@ -40,6 +40,9 @@ export default async function Page({params}){
     // Fetch data from server
     const projectData = await fetch (`http://backend:9000/projectdetail?project=${pageName}`, {
         method: 'GET',
+        next: {
+            revalidate: parseInt(process.env.REVALIDATE),
+        }
     })
         .then((res) => {return res.json()})
         .then((data) => {return data[pageName]})
