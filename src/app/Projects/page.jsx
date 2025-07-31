@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import HeaderButton from "../headerbutton";
 
-
 function Tag({tech}){
     return (
         <h1 className="text-white bg-tag px-4 py-1 rounded-2xl text-xs">
@@ -86,6 +85,9 @@ export default async function Projects() {
     // Fetch data from backend 
     const sortedData = await fetch("http://backend:9000/projects", {
         method: 'GET',
+        next: {
+            revalidate: parseInt(process.env.REVALIDATE),
+        },
         })
         .then((res) => {
             return res.json();
