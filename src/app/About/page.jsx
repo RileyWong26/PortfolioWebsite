@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default async function About(){
     return (
-        <section className = "bg-background1 max-w-screen min-h-screen transition-colors duration-1000 ease-in-out flex flex-row space-x-2 text-primary">
+            <section className = "bg-background1 max-w-screen min-h-screen transition-colors duration-1000 ease-in-out flex flex-row space-x-2 text-primary">
             <Header />
             <HeaderButton />
             <div className="w-full flex flex-col animate-pullup min-h-screen ">
@@ -16,9 +16,9 @@ export default async function About(){
                     {/* Left side text*/}
                     <div className="mx-auto w-full lg:min-h-[50vh] lg:h-full ">
                         <div className="lg:ml-auto lg:mr-0 m-auto w-4/5 h-full flex flex-col space-y-8 lg:space-y-12 justify-center">
-                            <h1 className="text-base leading-6">Hi! My name is Riley Wong, I am a developer passionate about creating robust software.  My love for developing started from creating both mods and games at age 10.  </h1>
-                            <h1 className="text-base leading-6">I am a team player who communicates effectively, faces problems critically and has the technical skills to tackle problems.  </h1>
-                            <h1 className="text-base leading-6">I am also passionate about music, and love to listen, play guitar and sing.</h1>
+                            <h1 className="text-base leading-6">Hi! My name is Riley Wong, I am a developer passionate about creating robust software.  My favourite works lies in creating software that solves issues and facilitates use for its users.  My love for developing started from creating both mods and games at age 10.  </h1>
+                            <h1 className="text-base leading-6">I am a team player who communicates effectively, faces problems critically and has the technical skills to tackle any problems.  </h1>
+                            <h1 className="text-base leading-6">In my spare time I like to listen to music, play guitar and sing.</h1>
                         </div>
                     </div>
                     {/*Right side Image and description */}
@@ -54,6 +54,6 @@ export default async function About(){
                         src={"/LightMode/RightArrow.webp"}/>
                 </Link>
             </div>
-        </section>
+            </section>
     )
 }
