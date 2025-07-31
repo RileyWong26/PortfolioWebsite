@@ -31,11 +31,12 @@ export default function Contact() {
         })
         .then((res) => {return res.status})
         .then((status) => {(status === 200) ? 
-            [EmailStatus.classList.remove("hidden"),
+            [
+                EmailStatus.classList.remove("hidden"),
                 EmailStatus.classList.remove("text-borderdeny"),
-                EmailStatus.classList.add("text-passed"), 
-                EmailStatus.classList.add("inline"), 
-                EmailStatus.innerHTML = "Message Sent!"] 
+                EmailStatus.classList.add("text-passed"),
+                EmailStatus.classList.add("inline"),
+                EmailStatus.innerHTML = "Message Sent!"]
                 : 
             ErrorText("Error occured sending mail");
         })
@@ -71,7 +72,7 @@ export default function Contact() {
         
         (!FilledEmail) ?
             [emailInput.classList.remove("border-transparent"),
-                emailInput.classList.add("border-borderdeny")] 
+                emailInput.classList.add("border-borderdeny")]
                 :
             [emailInput.classList.remove("border-borderdeny"),
                 emailInput.classList.add("border-transparent")];
