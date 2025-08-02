@@ -48,7 +48,7 @@ export default function ExperienceCard({title, data}){
             <h1 className="text-text2 text-lg ">
                 {role}
             </h1>
-            <h1 className="text-base h-5/10 truncate">
+            <h1 className="text-base h-5/10 text-wrap truncate">
                 {description}
             </h1>
             <h1 className="text-right h-1/10 text-base text-text2 text-balanced">
