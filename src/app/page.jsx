@@ -2,7 +2,7 @@ import Image from "next/image";
 import Header from "@/app/header";
 import Three from "./three";
 import HeaderButton from "./headerbutton";
-import { Suspense } from "react";
+import { Suspense } from "react"; 
 import Loading from "./loading";
 import Link from "next/link";
 
