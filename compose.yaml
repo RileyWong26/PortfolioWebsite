@@ -1,0 +1,26 @@
+services:
+  backend:
+    build: ./server/
+    ports: 
+      - "9000:9000"
+    secrets: 
+      - email_secret
+    restart: always
+    healthcheck:
+      test: curl -f http://backend:9000/status || exit 1
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+  frontend:
+    build: ./
+    ports: 
+      - "3000:3000"
+    working_dir: /app
+    depends_on:
+      backend:
+        condition: service_healthy
+
+secrets:
+  email_secret:
+    file: ./server/.env

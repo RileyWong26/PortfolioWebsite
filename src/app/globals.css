@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *, .dark, .dark *));
+
+:root {
+
+  --background1: #ffffff;
+  --background2: #efefef;
+  --background3: #d9d9d9;
+  --background1dark: #242424;
+  --background2dark: #141414;
+  --background3dark: #282828;
+  --color2: #9B5377;
+  --textcolor2: #7e7e7e;
+  --textcolor2dark: #ababab;
+  --primary: black;
+  --primarydark: white;
+  --borderselect: #A0DEFF;
+  --borderdeny: #FF5050;
+  --passed: #56C079;
+  --xs2 : 10px;
+  --xs3: 6px;
+
+}
+
+
+
+
+
+@keyframes glitch{
+  0%{
+    text-shadow:0.05em 0.05em 0.025em rgba(255, 0, 0),
+    -0.05em 0.05em 0.025em rgba(0, 255, 0),
+    0 0.05em 0.025em rgba(0, 0, 255);
+  }
+  25%{
+    text-shadow:-0.05em 0.03em 0.025em rgba(255, 0, 0),
+    0.05em 0.03em 0.025em rgba(0, 255, 0),
+    0 0.03em 0.025em rgba(0, 0, 255);
+  }
+  50%{
+    text-shadow:0.05em 0.01em 0.025em rgba(255, 0, 0),
+    -0.05em 0.01em 0.025em rgba(0, 255, 0),
+    0 0.05em 0.025em rgba(0, 0, 255);
+  }
+  75%{
+    text-shadow:-0.05em -0.01em 0.025em rgba(255, 0, 0),
+    0.05em -0.01em 0.025em rgba(0, 255, 0),
+    0 -0.01em 0.025em rgba(0, 0, 255);
+  }
+  100%{
+    text-shadow:0.05em -0.025em 0.025em rgba(255, 0, 0),
+    -0.05em -0.025em 0.025em rgba(0, 255, 0),
+    0 -0.025em 0.025em rgba(0, 0, 255);
+  }
+  
+}
+@keyframes appearUp{
+  0%{
+    opacity: 0%;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity:100%;
+    transform: translateY(0px);
+  }
+}
+@keyframes bounceRight{
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes turn{
+  0%{
+    transform: rotateX(10deg);
+    transform: rotateY(25deg);
+    
+  }
+  100%{
+    transform: rotateX(10deg);
+    transform: rotateY(-25deg);
+  }
+}
+@keyframes pulldown {
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}@keyframes goup {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-100%);
+  }
+}
+
+@theme {
+  --color-background1: var(--background1);
+  --color-background2: var(--background2);
+  --color-background3: var(--background3);
+  --color-primary: var(--primary);
+  --color-text2: var(--textcolor2);
+  --color-hightlight : var(--color2);
+  --color-tag: var(--textcolor2);
+  --color-alt: var(--textcolor2dark);
+  --color-borderselect: var(--borderselect);
+  --color-borderdeny: var(--borderdeny);
+  --color-passed : var(--passed);
+
+  --font-Anonymous: var(--font-Anonymous);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --text-xs2: var(--xs2);
+  --text-xs3: var(--xs3);
+
+  --animate-pullup: appearUp 1s ease-in-out ;
+  --animate-pullup2: appearUp 1s ease-in-out forwards;
+  --animate-glitchtext: glitch 3s infinite;
+  --animate-bounceright: bounceRight 2s ease-in-out infinite;
+  --animate-turn : turn 1s ease-in-out forwards;
+  --animate-pulldown: pulldown 1s ease-in-out forwards;
+  --animate-goup: pulldown 1s ease-in-out backwards;
+  
+}
+.dark{
+  --color-background3: var(--background3dark);
+  --color-background2: var(--background2dark);
+  --color-background1: var(--background1dark);
+  --color-text2: var(--textcolor2dark);
+  --color-primary: var(--primarydark);
+}
+@layer utilities{
+  .cardcontainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 600ms ease-in-out;
+}
+.cardfront, .cardback{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; 
+  top: 0%;
+  background: transparent;
+  cursor: pointer;
+}
+.cardback{
+  color: var(--color2);
+  transform: rotateY(180deg);
+  display: flex; 
+  flex-direction: column;
+  justify-content:space-evenly;
+}
+.glitchText{
+  text-shadow:
+    0.05em 0.05em 0.025em rgba(255, 0, 0),
+    -0.05em 0.05em 0.025em rgba(0, 255, 0),
+    0 0.05em 0.025em rgba(0, 0, 255);
+  animation: glitch 3s infinite;
+}
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
