@@ -83,7 +83,7 @@ function ProjectCard({id, data}) {
 
 export default async function Projects() {
     // Fetch data from backend 
-    const sortedData = await fetch("http://backend:9000/projects", {
+    const sortedData = await fetch("https://5lghnqwcha.execute-api.us-east-1.amazonaws.com/projects", {
         method: 'GET',
         next: {
             revalidate: parseInt(process.env.REVALIDATE),
@@ -93,7 +93,7 @@ export default async function Projects() {
             return res.json();
         })
         .then((data) => {
-            return data;
+            return data.body;
         })
         .catch((err) => {
             console.log(err); 
