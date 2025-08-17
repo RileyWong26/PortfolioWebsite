@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+import {nodemailer} from ("nodemailer");
 const express = require("express");
 const app = express();
 const cors = require('cors');
@@ -228,32 +229,32 @@ app.post("/email", (req, res) => {
     }
 
     async function sendMail(name, email, subject, message){
-    // Initalize the transporter, 
-    // The email account that sends the mail
-    let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth:{
-            user: secrets.email,
-            pass: secrets.appkey,
-        }
-    });
-    // Set up the mail options
-    let mailOptions = {
-        from: secrets.email,
-        to: [secrets.email, email],
-        subject: subject,
-        text: `From: ${email} \nName: ${name} \n\n${message}`,
-    };
-    
-    // Send the mail
-    transporter.sendMail(mailOptions)
-        .then((info) => {
-            console.log(info.response);
-        })
-        .catch((error) => {
-            res.status(400).json({msg:"Error Sending Message"});
+        // Initalize the transporter, 
+        // The email account that sends the mail
+        let transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth:{
+                user: secrets.email,
+                pass: secrets.appkey,
+            }
         });
-}
+        // Set up the mail options
+        let mailOptions = {
+            from: secrets.email,
+            to: [secrets.email, email],
+            subject: subject,
+            text: `From: ${email} \nName: ${name} \n\n${message}`,
+        };
+        
+        // Send the mail
+        transporter.sendMail(mailOptions)
+            .then((info) => {
+                console.log(info.response);
+            })
+            .catch((error) => {
+                res.status(400).json({msg:"Error Sending Message"});
+            });
+    }
 })
 
 // Projects endpoint
