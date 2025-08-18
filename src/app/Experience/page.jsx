@@ -1,6 +1,4 @@
 import Header from "@/app/header";
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs} from "firebase/firestore";
 import Image from "next/image";
 import ExperienceCard from "./ExperienceCard";
 import HeaderButton from "../headerbutton";
