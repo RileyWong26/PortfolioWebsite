@@ -2,8 +2,6 @@ import Header from "@/app/header";
 import Image from "next/image";
 import ExperienceCard from "./ExperienceCard";
 import HeaderButton from "../headerbutton";
-import Link from "next/link";
-
 
 export default async function Experience({props}) {
     // Config
