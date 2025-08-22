@@ -4,59 +4,23 @@ import ExperienceCard from "./ExperienceCard";
 import HeaderButton from "../headerbutton";
 
 export default async function Experience({props}) {
-    // Config
-    const firebaseConfig = {
-        apiKey: process.env.apiKey,
-        authDomain: process.env.authDomain,
-        projectId: process.env.projectId,
-        storageBucket: process.env.storageBucket,
-        messagingSenderId: process.env.messagingSenderId,
-        appId: process.env.appId,
-        measurementId: process.env.measurementId,
-    };
-
-    // Initialize app and database
-    const app = initializeApp(firebaseConfig);
-
-    const db = getFirestore(app);
     
-    // Query for all tabs in experience
-    const querySnapshot = await getDocs(collection(db, "Experience"));
-
-    // Sort Experiences into the most recent end date to the oldest end date.  
-    const sortExperiences = (experiences) => {
-        var sorted = [];
-        // Iterate through the experiences
-        experiences.forEach((experience) => {
-            const data = experience.data();
-            const StartDate = data.StartDate;
-            const EndDate = data.EndDate;
-            if (sorted.length > 0) {
-                // Check if current experience is present.
-                if (EndDate === "Present" || EndDate === undefined){
-                    sorted.unshift(experience);
-                }
-                else{
-                    var stack = [];
-                    // While the new entry's enddate is greater then the last enddate in the sorted array
-                    while(parseInt(EndDate.split(" ")[1]) > parseInt(sorted[sorted.length - 1].data().EndDate.split(" ")[1])){
-                        stack.push(sorted.pop());
-                    }
-                    sorted.push(experience);
-                    // Re add the items
-                    while(stack.length > 0){
-                        sorted.push(stack.pop());
-                    }
-                }
-                
-            }
-            else{
-                sorted.push(experience);
-            }
+    const sortedArray = await fetch("https://5lghnqwcha.execute-api.us-east-1.amazonaws.com/experience",{
+        method:"GET",
+        next: {
+            revalidate: parseInt(process.env.REVALIDATE),
+        },
+        })
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            return data.body;
+        })
+        .catch((err) => {
+            console.log(err);
+            return {};
         });
-        return sorted;
-    }
-    const sortedArray = sortExperiences(querySnapshot);
 
     // Array for map function
     var experience = [];
