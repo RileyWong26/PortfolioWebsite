@@ -1,5 +1,3 @@
-import { getFirestore , getDoc, doc, getDocFromCache, getDocFromServer} from "firebase/firestore";
-import { initializeApp } from "firebase/app";
 import Header from "@/app/header";
 import Image from "next/image";
 import HeaderButton from "@/app/headerbutton";
@@ -38,24 +36,12 @@ export default async function Page({params}){
     const {slug} = await params;
     const pageName = slug.replaceAll("%20" , " ");
 
-    // Fetch data from server
-    const firebaseConfig = {
-        apiKey: process.env.apiKey,
-        authDomain: process.env.authDomain,
-        projectId: process.env.projectId,
-        storageBucket: process.env.storageBucket,
-        messagingSenderId: process.env.messagingSenderId,
-        appId: process.env.appId,
-        measurementId: process.env.measurementId,
-    };
-    // Initalize app and database
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
+    const data = await fetch (`https://5lghnqwcha.execute-api.us-east-1.amazonaws.com/experiencedetail?experience=${slug}`,{
+        method:'GET',
 
-    // Call Reference to the doc, Then snapshot
-    const docRef = doc(db, "Experience", pageName);
-    const docSnap = await getDoc(docRef);
-    const data = docSnap.data();
+    })
+        .then((res) => {return res.json();})
+        .then((data) => {return data.body[pageName];})
 
     const image = data.Image;
     const link = data.Link
