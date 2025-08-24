@@ -38,10 +38,13 @@ export default async function Page({params}){
 
     const data = await fetch (`https://5lghnqwcha.execute-api.us-east-1.amazonaws.com/experiencedetail?experience=${slug}`,{
         method:'GET',
-
+        next: {
+                    revalidate: parseInt(process.env.REVALIDATE),
+        },
     })
         .then((res) => {return res.json();})
         .then((data) => {return data.body[pageName];})
+        .catch((err) => {return {};});
 
     const image = data.Image;
     const link = data.Link
