@@ -21,28 +21,33 @@ export default async function Experience({props}) {
             console.log(err);
             return {};
         });
-
+    var experienceArray = [];
+    const keys = Object.keys(sortedArray);
+    for(let i=0; i<keys.length; i++){
+        experienceArray.push(sortedArray[keys[i]]);
+    }
     // Array for map function
     var experience = [];
     var images = [];
     // Iterate through the returned docs
-    sortedArray.forEach((item) => {
-
+    experienceArray.forEach((item) => {
+        const name = item.Name;
+        const image = item.Image;
         experience.push(
             <ExperienceCard 
-                key={item.id} 
-                title={item.id} 
-                data={item.data()}/>
+                key={name} 
+                title={name} 
+                data={item}/>
         );
         images.push(
             <div className="absolute w-full h-full"
-                key={item.id}>
-                {(item.data().Image === undefined || item.data().Image === "") ? null :
+                key={name}>
+                {(image === undefined || image === "") ? null :
                     <Image
-                        id={item.id}
+                        id={name}
                         className="absolute rounded-2xl opacity-0 h-full w-auto"
-                        key={item.id}
-                        src={item.data().Image}
+                        key={name}
+                        src={image}
                         fill
                         alt={"Image of Work Experience"}
                         priority={true}
