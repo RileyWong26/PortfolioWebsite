@@ -26,7 +26,8 @@ export default function Contact() {
             }),
             headers:{
                 'Content-Type' : 'application/json',
-            }
+            },
+            mode: 'no-cors',
         })
         .then((res) => {return res.statuscode})
         .then((status) => {(status === 200) ? 
