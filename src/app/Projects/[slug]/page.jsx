@@ -38,14 +38,14 @@ export default async function Page({params}){
     const pageName = slug.replaceAll("%20", " ");
 
     // Fetch data from server
-    const projectData = await fetch (`http://backend:9000/projectdetail?project=${pageName}`, {
+    const projectData = await fetch (`https://5lghnqwcha.execute-api.us-east-1.amazonaws.com/projectdetail?project=${slug}`, {
         method: 'GET',
         next: {
             revalidate: parseInt(process.env.REVALIDATE),
         }
     })
         .then((res) => {return res.json()})
-        .then((data) => {return data[pageName]})
+        .then((data) => {return data.body[pageName]})
         .catch((err) => {console.log(err)});
 
     const image = projectData.Image;
