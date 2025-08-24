@@ -16,7 +16,7 @@ export default function Contact() {
     
     async function sendMail(name, email, subject, message){
         const EmailStatus = document.getElementById("EmailStatus");
-        await fetch("http://127.0.0.1:9000/email", {
+        await fetch("https://5lghnqwcha.execute-api.us-east-1.amazonaws.com/email", {
             method: 'POST',
             body: JSON.stringify({
                 name: name,
@@ -28,7 +28,7 @@ export default function Contact() {
                 'Content-Type' : 'application/json',
             }
         })
-        .then((res) => {return res.status})
+        .then((res) => {return res.statuscode})
         .then((status) => {(status === 200) ? 
             [
                 EmailStatus.classList.remove("hidden"),
