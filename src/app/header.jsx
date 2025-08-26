@@ -332,7 +332,7 @@ const Header = () => {
                             alt="Resume"
                             unoptimized/>
                         <Image 
-                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full hidden dark:inline"
+                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full hidden dark:block"
                             src={"/DarkMode/ResumeDark.webp"}
                             width={0} height={0}
                             quality={100}
