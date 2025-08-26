@@ -308,11 +308,11 @@ const Header = () => {
 
             {/*Social external links */}
             <nav className="w-full h-1/10 lg:h-auto flex flex-row lg:flex-col space-y-3  lg:mx-0 ">
-                <a className="w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-1 z-1"
+                <a className="w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
                     href="https://docs.google.com/document/d/1nGHDpZ9HvGR8FkzPURvtzzub3NPhHUgyPH-FS1WBxu0/preview"
                     target="_blank"
                     id="HeaderResume">  
-                    <div className="w-full h-full hidden group-hover:block 
+                    <div className="m-auto w-full h-full hidden group-hover:inline
                         transition-all duration-300 ease-in-out content-center">
                         <Image 
                             className="m-auto h-auto w-3/5 lg:w-auto lg:h-full"
@@ -340,10 +340,10 @@ const Header = () => {
                             unoptimized/>
                     </div>
                 </a>
-                <a className=" w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-1 z-1"
+                <a className=" w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
                     href="https://github.com/RileyWong26"
                     target="_blank">
-                    <div className="w-full h-full group-hover:block
+                    <div className="w-full h-full group-hover:inline
                         transition-opacity duration-300 ease-in-out hidden content-center">
                         <Image 
                             className="m-auto h-auto w-3/5 lg:w-auto lg:h-full"
@@ -363,7 +363,7 @@ const Header = () => {
                             alt="GitHub"
                             unoptimized/>
                         <Image  
-                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full hidden dark:inline"
+                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full hidden dark:block"
                             src={"/DarkMode/GitHubDark.webp"}
                             width={0} height={0}
                             quality={100}
@@ -371,10 +371,10 @@ const Header = () => {
                             unoptimized/>
                     </div>
                 </a>
-                <a className="w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-1 z-1"
+                <a className="w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
                     href="//www.linkedin.com/in/riley-wong-1051b2250"
                     target="_blank">
-                    <div className=" w-full h-full group-hover:block hidden
+                    <div className=" w-full h-full group-hover:inline hidden
                         transition-opacity duration-300 ease-in-out content-center">
                         <Image 
                             className="m-auto h-auto w-3/5 lg:w-auto lg:h-full"
@@ -392,17 +392,17 @@ const Header = () => {
                             alt="LinkedIn"
                             unoptimized/>
                         <Image 
-                            className="m-auto w-3/5 h-auto lg:w-auto lg:h-full hidden dark:inline"
+                            className="m-auto w-3/5 h-auto lg:w-auto lg:h-full hidden dark:block"
                             src={"/DarkMode/LinkedInDark.webp"}
                             width={0} height={0}
                             alt="LinkedIn"
                             unoptimized/>
                     </div>
                 </a>
-                <a className="w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-1 z-1"
+                <a className="w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
                     href="https://ryebread26.itch.io"
                     target="_blank">
-                    <div className="m-auto w-full h-full hidden group-hover:block
+                    <div className="m-auto w-full h-full hidden group-hover:inline
                             transition-opacity duration-300 ease-in-out content-center">
                             <Image 
                                 className="m-auto h-auto w-3/5 lg:w-auto lg:h-full"
@@ -419,7 +419,7 @@ const Header = () => {
                             alt="ItchIo"
                             unoptimized/>
                         <Image 
-                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full hidden dark:inline"
+                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full hidden dark:block"
                             src={"/DarkMode/ItchIoDark.webp"}
                             width={0} height={0}
                             alt="ItchIo"
@@ -436,7 +436,7 @@ const Header = () => {
                         localStorage.theme = newTheme;
                     }}
                         }>
-                    <div className="m-auto w-full h-full hidden group-hover:block
+                    <div className="m-auto w-full h-full hidden group-hover:inline
                         transition-opacity duration-300 ease-in-out content-center">
                         <Image 
                             className="m-auto h-auto w-4/5 lg:w-auto lg:h-full dark:hidden"
