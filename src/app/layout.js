@@ -10,7 +10,7 @@ const anonymousPro = Anonymous_Pro({
 
 export const metadata = {
   title: "Riley Wong",
-  description: "I am a developer passionate about crafting stellar user-driven applications, through robust engineering ",
+  description: "I am a developer passionate about crafting stellar user-driven applications, through robust engineering.",
 };
 
 export default function RootLayout({ children }) {
