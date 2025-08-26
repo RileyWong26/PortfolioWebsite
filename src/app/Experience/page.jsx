@@ -4,7 +4,6 @@ import ExperienceCard from "./ExperienceCard";
 import HeaderButton from "../headerbutton";
 
 export default async function Experience({props}) {
-    
     const sortedArray = await fetch("https://5lghnqwcha.execute-api.us-east-1.amazonaws.com/experience",{
         method:"GET",
         next: {
