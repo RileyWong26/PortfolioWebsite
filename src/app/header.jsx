@@ -332,7 +332,7 @@ const Header = () => {
                             alt="Resume"
                             unoptimized/>
                         <Image 
-                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full hidden dark:inline"
+                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full hidden dark:block"
                             src={"/DarkMode/ResumeDark.webp"}
                             width={0} height={0}
                             quality={100}
@@ -363,7 +363,7 @@ const Header = () => {
                             alt="GitHub"
                             unoptimized/>
                         <Image  
-                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full hidden dark:inline"
+                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full hidden dark:block"
                             src={"/DarkMode/GitHubDark.webp"}
                             width={0} height={0}
                             quality={100}
@@ -392,7 +392,7 @@ const Header = () => {
                             alt="LinkedIn"
                             unoptimized/>
                         <Image 
-                            className="m-auto w-3/5 h-auto lg:w-auto lg:h-full hidden dark:inline"
+                            className="m-auto w-3/5 h-auto lg:w-auto lg:h-full hidden dark:block"
                             src={"/DarkMode/LinkedInDark.webp"}
                             width={0} height={0}
                             alt="LinkedIn"
@@ -419,7 +419,7 @@ const Header = () => {
                             alt="ItchIo"
                             unoptimized/>
                         <Image 
-                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full hidden dark:inline"
+                            className="m-auto h-auto w-3/5 lg:w-auto lg:h-full hidden dark:block"
                             src={"/DarkMode/ItchIoDark.webp"}
                             width={0} height={0}
                             alt="ItchIo"
@@ -439,13 +439,13 @@ const Header = () => {
                     <div className="m-auto w-full h-full hidden group-hover:block
                         transition-opacity duration-300 ease-in-out content-center">
                         <Image 
-                            className="m-auto h-auto w-4/5 lg:w-auto lg:h-full dark:hidden"
+                            className="m-auto h-auto w-4/5 lg:w-auto lg:h-full dark:block"
                             src={"/LightMode/LightModeColor.webp"}
                             width={0} height={0}
                             alt="ThemeColor"
                             unoptimized/>
                         <Image 
-                            className="m-auto h-auto w-4/5 lg:w-auto lg:h-full hidden dark:inline"
+                            className="m-auto h-auto w-4/5 lg:w-auto lg:h-full hidden dark:block"
                             src={"/DarkMode/DarkModeColor.webp"}
                             width={0} height={0}
                             alt="ThemeColor"
@@ -460,7 +460,7 @@ const Header = () => {
                             alt="Theme"
                             unoptimized/>
                         <Image 
-                            className="m-auto h-auto w-4/5 lg:w-auto lg:h-full hidden dark:inline"
+                            className="m-auto h-auto w-4/5 lg:w-auto lg:h-full hidden dark:block"
                             src={"/DarkMode/DarkMode.webp"}
                             width={0} height={0}
                             alt="Theme"
