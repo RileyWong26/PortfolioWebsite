@@ -64,9 +64,9 @@ const Header = () => {
                     alt="Logo"
                     quality={100}
                     unoptimized/>
-                <h1 className="mt-2 m-auto text-xs text-primary transition-colors duration-1000 ease-in-out">
+                <h2 className="mt-2 m-auto text-xs text-primary transition-colors duration-1000 ease-in-out">
                     rileywongwong @gmail.com
-                </h1>
+                </h2>
             </div>
 
             {/*  Page Redirections */}
