@@ -9,7 +9,7 @@ const anonymousPro = Anonymous_Pro({
 });
 
 export const metadata = {
-  title: "Riley Wong",
+  title: "Riley Wong | Software Developer",
   description: "I am a developer passionate about crafting stellar user-driven applications, through robust engineering ",
 };
 
