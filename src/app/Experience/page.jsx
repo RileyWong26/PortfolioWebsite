@@ -72,7 +72,9 @@ export default async function Experience({props}) {
                             Work Experience
                         </h1>
                         <div className="w-4/5 flex flex-col ml-auto space-y-3 py-3">
-                            {experience.map((entry) => entry)}
+                            <Suspense >
+                                {experience.map((entry) => entry)}
+                            </Suspense>
                         </div>
                     </div>
                     <div className="hidden xl:inline w-3/4 h-screen content-center sticky top-0 perspective-distant ">
