@@ -2,6 +2,7 @@ import Header from "@/app/header";
 import Image from "next/image";
 import Link from "next/link";
 import HeaderButton from "../headerbutton";
+import { Suspense } from "react";
 
 function Tag({tech}){
     return (
@@ -122,11 +123,13 @@ export default async function Projects() {
                     Projects
                 </h1>
                 <div className="w-full xl:w-9/10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 m-auto">
-                    {projects.map((item) => {
-                        return(
-                            item
-                        );
-                    })}
+                    <Suspense placeholder={<Loading />}>
+                        {projects.map((item) => {
+                            return(
+                                item
+                            );
+                        })}
+                    </Suspense>
                 </div>
                 <Link className="lg:pl-34 pl-14 text-primary w-8/9 lg:w-1/2 mt-4 flex flex-row text-xl space-x-4 content-center h-6 "
                     href="/Contact"> 
