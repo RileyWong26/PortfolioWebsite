@@ -2,6 +2,7 @@ import Header from "@/app/header";
 import Image from "next/image";
 import ExperienceCard from "./ExperienceCard";
 import HeaderButton from "../headerbutton";
+import Loading from "../loading";
 
 export default async function Experience({props}) {
     const sortedArray = await fetch("https://5lghnqwcha.execute-api.us-east-1.amazonaws.com/experience",{
@@ -66,17 +67,19 @@ export default async function Experience({props}) {
 
             <section className="w-full flex flex-col animate-pullup space-y-6 py-4">
                 <div className="w-full flex flex-row ">
+                    {/* Experiences */}
                     <div className="w-4/5 flex flex-col space-y-6">
                         <h1 className="h-[15vh] w-4/5 text-hightlight ml-auto 
                             bg-amber content-end font-bold text-3xl ">
                             Work Experience
                         </h1>
                         <div className="w-4/5 flex flex-col ml-auto space-y-3 py-3">
-                            <Suspense >
+                            <Suspense placeholder={<Loading />}>
                                 {experience.map((entry) => entry)}
                             </Suspense>
                         </div>
                     </div>
+                    {/* Experiences Image*/}
                     <div className="hidden xl:inline w-3/4 h-screen content-center sticky top-0 perspective-distant ">
                         <div className="relative w-9/10 h-[50vh] transform-3d bg-transparent m-auto"
                             id="ExperienceImageContainer">
