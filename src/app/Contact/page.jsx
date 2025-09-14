@@ -105,13 +105,13 @@ export default function Contact() {
                         Contact Me
                     </h1>
                     <div className="lg:h-[10vh] w-full text-xl text-primary flex flex-col lg:flex-row ">
-                        <h1 className="content-center">
+                        <p className="content-center">
                             Get in touch here, or shoot me an email directly at&nbsp;
                             <a className="text-hightlight content-center"
                             href="mailto:rileywongwong@gmail.com">
                             rileywongwong@gmail.com
                             </a>
-                        </h1>
+                        </p>
                         <a className="w-1/10 h-auto content-center"
                             href="//www.linkedin.com/in/riley-wong-1051b2250"
                             target="_blank">
@@ -193,10 +193,10 @@ export default function Contact() {
                             id="SendButton" onClick={() => {checkInputs()}}>
                             Send Message
                         </button>
-                        <h1 className="w-full lg:w-1/2 ml-5 content-center hidden font-bold text-xl"
+                        <h2 className="w-full lg:w-1/2 ml-5 content-center hidden font-bold text-xl"
                             id="EmailStatus">
                             Email Sent!
-                        </h1>
+                        </h2>
                     </div>
                 </div>
             </div>
