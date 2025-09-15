@@ -106,7 +106,7 @@ export default function Contact() {
                     </h1>
                     <div className="lg:h-[10vh] w-full text-xl text-primary flex flex-col lg:flex-row ">
                         <p className="content-center">
-                            Get in touch here, or shoot me an email directly at&nbsp;
+                            I am always looking forward to connect or work on projects.  Get in touch here, or shoot me an email directly at&nbsp;
                             <a className="text-hightlight content-center"
                             href="mailto:rileywongwong@gmail.com">
                             rileywongwong@gmail.com
