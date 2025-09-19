@@ -3,6 +3,7 @@ import Image from "next/image";
 import ExperienceCard from "./ExperienceCard";
 import HeaderButton from "../headerbutton";
 import Loading from "../loading";
+import { Suspense } from "react";
 
 export default async function Experience({props}) {
     const sortedArray = await fetch("https://5lghnqwcha.execute-api.us-east-1.amazonaws.com/experience",{
@@ -78,6 +79,23 @@ export default async function Experience({props}) {
                                 {experience.map((entry) => entry)}
                             </Suspense>
                         </div>
+                        <a className="ml-auto mt-10 text-primary w-4/5 flex flex-row text-xl space-x-4 content-center h-6"
+                            href="https://docs.google.com/document/d/1nGHDpZ9HvGR8FkzPURvtzzub3NPhHUgyPH-FS1WBxu0/preview"
+                            target="_blank"> 
+                            <h2 className="content-center">
+                                RESUME
+                            </h2>
+                            <Image 
+                                className="my-auto h-3/5 w-auto hidden dark:inline animate-bounceright"
+                                width={1000} height={1000}
+                                alt="Dark Mode Right Arrow"
+                                src={"/DarkMode/RightArrow.webp"}/>
+                                <Image 
+                                className="my-auto h-3/5 w-auto dark:hidden animate-bounceright"
+                                width={1000} height={1000}
+                                alt="Light Mode Right Arrow"
+                                src={"/LightMode/RightArrow.webp"}/>
+                        </a>
                     </div>
                     {/* Experiences Image*/}
                     <div className="hidden xl:inline w-3/4 h-screen content-center sticky top-0 perspective-distant ">
@@ -89,23 +107,7 @@ export default async function Experience({props}) {
                         </div>
                     </div>
                 </div>
-                <a className="lg:pl-38 pl-20 text-primary w-8/9 lg:w-1/2 flex flex-row text-xl space-x-4 content-center h-6"
-                    href="https://docs.google.com/document/d/1nGHDpZ9HvGR8FkzPURvtzzub3NPhHUgyPH-FS1WBxu0/preview"
-                    target="_blank"> 
-                    <h1 className="content-center">
-                        RESUME
-                    </h1>
-                    <Image 
-                        className="my-auto h-3/5 w-auto hidden dark:inline animate-bounceright"
-                        width={1000} height={1000}
-                        alt="Dark Mode Right Arrow"
-                        src={"/DarkMode/RightArrow.webp"}/>
-                        <Image 
-                        className="my-auto h-3/5 w-auto dark:hidden animate-bounceright"
-                        width={1000} height={1000}
-                        alt="Light Mode Right Arrow"
-                        src={"/LightMode/RightArrow.webp"}/>
-                </a>
+                
             </section>
         </section>
     )
