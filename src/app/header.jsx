@@ -64,9 +64,9 @@ const Header = () => {
                     alt="Logo"
                     quality={100}
                     unoptimized/>
-                <h1 className="mt-2 m-auto text-xs text-primary transition-colors duration-1000 ease-in-out">
+                <h2 className="mt-2 m-auto text-xs text-primary transition-colors duration-1000 ease-in-out">
                     rileywongwong @gmail.com
-                </h1>
+                </h2>
             </div>
 
             {/*  Page Redirections */}
@@ -77,10 +77,10 @@ const Header = () => {
                     id="HeaderHome"> 
                     <div className="h-full w-full flex flex-row space-x-4 
                         lg:relative lg:transform-3d lg:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
-                        <div className="h-full w-1/3 lg:w-full lg:absolute lg:backface-hidden content-center group " 
+                        <div className="h-full w-1/3 lg:w-full lg:absolute backface-hidden content-center group " 
                             id={"HeaderHomeImgContainer"}>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto dark:hidden group-[.current]:hidden"
+                                className="m-auto h-3/5 lg:h-full w-auto dark:hidden group-[.current]:hidden backface-hidden"
                                 src={"/LightMode/HomeLight.webp"}
                                 width={0} height={0}
                                 alt="Home"
@@ -88,7 +88,7 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:inline group-[.current]:hidden"
+                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:inline group-[.current]:hidden backface-hidden"
                                 src={"/DarkMode/HomeDark.webp"}
                                 width={0} height={0}
                                 alt="Home"
@@ -96,7 +96,7 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto hidden group-[.current]:inline dark:group-[.current]:hidden"
+                                className="m-auto h-3/5 lg:h-full w-auto hidden group-[.current]:inline dark:group-[.current]:hidden backface-hidden"
                                 src={"/LightMode/Home2Light.webp"}
                                 width={0} height={0}
                                 alt="Home"
@@ -104,7 +104,7 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:group-[.current]:inline"
+                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:group-[.current]:inline backface-hidden"
                                 src={"/DarkMode/Home2Dark.webp"}
                                 width={0} height={0}
                                 alt="Home"
@@ -113,7 +113,7 @@ const Header = () => {
                                 unoptimized/>
                         </div>
                         <div className="content-center text-hightlight text-2xl lg:w-full 
-                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto lg:backface-hidden lg:text-base"> 
+                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto backface-hidden lg:text-base"> 
                             HOME
                         </div>
                     </div>
@@ -124,32 +124,32 @@ const Header = () => {
                     id="HeaderAbout"> 
                     <div className="h-full w-full flex flex-row space-x-4 
                         lg:relative lg:transform-3d lg:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
-                        <div className="h-full w-1/3 lg:w-full lg:absolute lg:backface-hidden content-center group "
+                        <div className="h-full w-1/3 lg:w-full lg:absolute backface-hidden content-center group "
                             id={"HeaderAboutImgContainer"}>
                         
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto dark:hidden group-[.current]:hidden"
+                                className="m-auto h-3/5 lg:h-full w-auto dark:hidden group-[.current]:hidden backface-hidden"
                                 src={"/LightMode/AboutLight.webp"}
                                 width={0} height={0}
                                 alt="About Me"
                                 id="HeaderAboutImg"
                                 unoptimized/>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:inline group-[.current]:hidden"
+                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:inline group-[.current]:hidden backface-hidden"
                                 src={"/DarkMode/AboutDark.webp"}
                                 width={0} height={0}
                                 alt="About Me"
                                 id="HeaderAboutImg"
                                 unoptimized/>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto hidden group-[.current]:inline dark:group-[.current]:hidden"
+                                className="m-auto h-3/5 lg:h-full w-auto hidden group-[.current]:inline dark:group-[.current]:hidden backface-hidden"
                                 src={"/LightMode/About2Light.webp"}
                                 width={0} height={0}
                                 alt="About Me"
                                 id="HeaderAboutLightSelectImg"
                                 unoptimized/>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:group-[.current]:inline"
+                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:group-[.current]:inline backface-hidden"
                                 src={"/DarkMode/About2Dark.webp"}
                                 width={0} height={0}
                                 alt="About Me"
@@ -158,7 +158,7 @@ const Header = () => {
                         
                         </div>
                         <div className="content-center text-hightlight text-2xl lg:w-full
-                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto lg:backface-hidden lg:text-base">
+                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto backface-hidden lg:text-base">
                             ABOUT
                         </div>
                     </div>
@@ -169,10 +169,10 @@ const Header = () => {
                     id="HeaderExperience"> 
                     <div className="h-full w-full flex flex-row space-x-4 
                         lg:relative lg:transform-3d lg:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
-                        <div className="h-full w-1/3 lg:w-full lg:absolute lg:backface-hidden content-center group" 
+                        <div className="h-full w-1/3 lg:w-full lg:absolute backface-hidden content-center group" 
                             id={"HeaderExperienceImgContainer"}>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto dark:hidden group-[.current]:hidden"
+                                className="m-auto h-3/5 lg:h-full w-auto dark:hidden group-[.current]:hidden backface-hidden"
                                 src={"/LightMode/ExperienceLight.webp"}
                                 width={0} height={0}
                                 alt="Experience"
@@ -180,7 +180,7 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:inline group-[.current]:hidden"
+                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:inline group-[.current]:hidden backface-hidden"
                                 src={"/DarkMode/ExperienceDark.webp"}
                                 width={0} height={0}
                                 alt="Experience"
@@ -188,7 +188,7 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto hidden group-[.current]:inline dark:group-[.current]:hidden"
+                                className="m-auto h-3/5 lg:h-full w-auto hidden group-[.current]:inline dark:group-[.current]:hidden backface-hidden"
                                 src={"/LightMode/Experience2Light.webp"}
                                 width={0} height={0}
                                 alt="Experience"
@@ -196,7 +196,7 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:group-[.current]:inline"
+                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:group-[.current]:inline backface-hidden"
                                 src={"/DarkMode/Experience2Dark.webp"}
                                 width={0} height={0}
                                 alt="Experience"
@@ -205,7 +205,7 @@ const Header = () => {
                                 unoptimized/>
                         </div>
                         <div className="content-center text-hightlight text-2xl lg:w-full
-                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto lg:backface-hidden lg:text-base">
+                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto backface-hidden lg:text-base">
                             EXPERIENCE  
                         </div>
                     </div>
@@ -216,10 +216,10 @@ const Header = () => {
                     id="HeaderProjects">
                     <div className="w-full h-full flex flex-row space-x-4 
                         lg:relative lg:transform-3d lg:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
-                        <div className="h-full w-1/3 lg:w-full lg:absolute lg:backface-hidden content-center group"
+                        <div className="h-full w-1/3 lg:w-full lg:absolute backface-hidden content-center group"
                             id={"HeaderProjectsImgContainer"}>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto dark:hidden group-[.current]:hidden"
+                                className="m-auto h-3/5 lg:h-full w-auto dark:hidden group-[.current]:hidden backface-hidden"
                                 src={"/LightMode/ProjectsLight.webp"}
                                 width={0} height={0}
                                 alt="Projects"
@@ -227,7 +227,7 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:inline group-[.current]:hidden"
+                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:inline group-[.current]:hidden backface-hidden"
                                 src={"/DarkMode/ProjectsDark.webp"}
                                 width={0} height={0}
                                 alt="Projects"
@@ -235,7 +235,7 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto hidden group-[.current]:inline dark:group-[.current]:hidden"
+                                className="m-auto h-3/5 lg:h-full w-auto hidden group-[.current]:inline dark:group-[.current]:hidden backface-hidden" 
                                 src={"/LightMode/Projects2Light.webp"}
                                 width={0} height={0}
                                 alt="Projects"
@@ -243,7 +243,7 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                             <Image
-                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:group-[.current]:inline"
+                                className="m-auto h-3/5 lg:h-full w-auto hidden dark:group-[.current]:inline backface-hidden"
                                 src={"/DarkMode/Projects2Dark.webp"}
                                 width={0} height={0}
                                 alt="Projects"
@@ -252,21 +252,21 @@ const Header = () => {
                                 unoptimized/>
                         </div>
                         <div className="text-hightlight content-center text-2xl lg:w-full 
-                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto lg:backface-hidden lg:text-base">
+                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto backface-hidden lg:text-base">
                             PROJECTS
                         </div>
                     </div> 
                 </Link>
                 <Link className="w-full h-1/5 lg:h-[50px] content-center perspective-distant group p-4 lg:p-2
-                    transition-colors duration-1000 ease-in-out [.current]:bg-background3"
+                    transition-colors duration-1000 ease-in-out [.current]:bg-background3 backface-hidden"
                     href="/Contact"
                     id="HeaderContact"> 
                     <div className="h-full w-full flex flex-row space-x-4 
                         lg:relative lg:transform-3d lg:group-hover:-rotate-y-180 transition-all duration-600 ease-in-out">
-                        <div className="h-full w-1/3 lg:w-full lg:absolute lg:backface-hidden content-center group"
+                        <div className="h-full w-1/3 lg:w-full lg:absolute backface-hidden content-center group"
                             id={"HeaderContactImgContainer"}>
                             <Image
-                                className="m-auto w-auto h-3/5 lg:h-full dark:hidden group-[.current]:hidden"
+                                className="m-auto w-auto h-3/5 lg:h-full dark:hidden group-[.current]:hidden backface-hidden"
                                 src={"/LightMode/MailLight.webp"}
                                 width={0} height={0}
                                 alt="Contact"
@@ -274,7 +274,7 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                             <Image
-                                className="m-auto w-auto h-3/5 lg:h-full hidden dark:inline group-[.current]:hidden"
+                                className="m-auto w-auto h-3/5 lg:h-full hidden dark:inline group-[.current]:hidden backface-hidden"
                                 src={"/DarkMode/MailDark.webp"}
                                 width={0} height={0}
                                 alt="Contact"
@@ -282,7 +282,7 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                             <Image
-                                className="m-auto w-auto h-3/5 lg:h-full hidden group-[.current]:inline dark:group-[.current]:hidden"
+                                className="m-auto w-auto h-3/5 lg:h-full hidden group-[.current]:inline dark:group-[.current]:hidden backface-hidden"
                                 src={"/LightMode/Mail2Light.webp"}
                                 width={0} height={0}
                                 alt="Contact"
@@ -290,7 +290,7 @@ const Header = () => {
                                 quality={100}
                                 unoptimized/>
                             <Image
-                                className="m-auto w-auto h-3/5 lg:h-full hidden dark:group-[.current]:inline"
+                                className="m-auto w-auto h-3/5 lg:h-full hidden dark:group-[.current]:inline backface-hidden"
                                 src={"/DarkMode/Mail2Dark.webp"}
                                 width={0} height={0}
                                 alt="Contact"
@@ -299,7 +299,7 @@ const Header = () => {
                                 unoptimized/>
                         </div>
                         <div className="text-hightlight content-center text-2xl lg:w-full
-                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto lg:backface-hidden lg:text-base">
+                            lg:h-full lg:absolute lg:rotate-y-180 lg:m-auto backface-hidden lg:text-base">
                             CONTACT
                         </div>
                     </div>
@@ -308,7 +308,7 @@ const Header = () => {
 
             {/*Social external links */}
             <nav className="w-full h-1/10 lg:h-auto flex flex-row lg:flex-col space-y-3  lg:mx-0 ">
-                <a className="w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
+                <a className="w-1/5 max-w-30 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
                     href="https://docs.google.com/document/d/1nGHDpZ9HvGR8FkzPURvtzzub3NPhHUgyPH-FS1WBxu0/preview"
                     target="_blank"
                     id="HeaderResume">  
@@ -340,7 +340,7 @@ const Header = () => {
                             unoptimized/>
                     </div>
                 </a>
-                <a className=" w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
+                <a className=" w-1/5 max-w-30 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
                     href="https://github.com/RileyWong26"
                     target="_blank">
                     <div className="w-full h-full group-hover:inline
@@ -371,7 +371,7 @@ const Header = () => {
                             unoptimized/>
                     </div>
                 </a>
-                <a className="w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
+                <a className="w-1/5 max-w-30 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
                     href="//www.linkedin.com/in/riley-wong-1051b2250"
                     target="_blank">
                     <div className=" w-full h-full group-hover:inline hidden
@@ -399,7 +399,7 @@ const Header = () => {
                             unoptimized/>
                     </div>
                 </a>
-                <a className="w-1/5 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
+                <a className="w-1/5 max-w-30 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
                     href="https://ryebread26.itch.io"
                     target="_blank">
                     <div className="m-auto w-full h-full hidden group-hover:inline
@@ -427,7 +427,7 @@ const Header = () => {
                     </div>
                 </a>
                 {/* Theme button */}
-                <div className="w-1/5 lg:w-full lg:h-[40px] relative group cursor-pointer z-1"
+                <div className="w-1/5 max-w-30 lg:w-full lg:h-[40px] relative group cursor-pointer z-1"
                     id="HeaderTheme"
                     onClick={() => {{   
                         let newTheme;
@@ -485,9 +485,9 @@ const Header = () => {
                         alt={"MailContactLight"}
                         unoptimized/>
                 </div>
-                <h1 className="my-auto text-base text-hightlight">
+                <h2 className="my-auto text-base text-hightlight">
                     rileywongwong@gmail.com
-                </h1>
+                </h2>
             </section>
         </nav>
     )
