@@ -101,7 +101,7 @@ export default function Contact() {
             <HeaderButton />
             <div className="w-full min-h-screen flex flex-col animate-pullup">
                 <div className="w-4/5 min-h-screen flex flex-col mx-auto space-y-4 py-3 ">
-                    <h1 className="h-[10vh] w-full text-3xl text-hightlight font-bold mt-auto lg:m-auto content-center">
+                    <h1 className=" w-full text-3xl text-hightlight font-bold mt-auto content-center">
                         Contact Me
                     </h1>
                     <div className="lg:h-[10vh] w-full text-xl text-primary flex flex-col lg:flex-row ">
@@ -188,8 +188,8 @@ export default function Contact() {
                         }}> 
                     </textarea>
                     {/*                 Send button             */}
-                    <div className="flex flex-col lg:flex-row space-x-5 w-full ">
-                        <button className="text-white bg-hightlight m-0 w-full lg:w-1/4 p-4 rounded-2xl cursor-pointer text-xl" 
+                    <div className="flex flex-col lg:flex-row space-x-5 w-full mb-auto ">
+                        <button className="text-white bg-hightlight m-0 w-full lg:w-1/4 p-4 rounded-2xl cursor-pointer text-xl " 
                             id="SendButton" onClick={() => {checkInputs()}}>
                             Send Message
                         </button>
