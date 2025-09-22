@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Tag({tech}){
     return (
-        <h1 className="text-superhighlight font-bold bg-hightlight/40 px-4 py-1 rounded-2xl text-xs">
+        <h1 className="text-superhighlight font-bold bg-hightlight/40 px-4 py-1 rounded-2xl text-xs tracking-widest ">
             {tech}
         </h1>
     )
@@ -86,7 +86,7 @@ export default function ExperienceCard({title, data}){
                 </h2>
             </div>
             <h2 className="mt-auto text-base text-text2 text-balanced flex flex-col lg:flex-row">
-                <div className="flex flex-row space-x-1 max-w-1/2">
+                <div className="hidden lg:flex flex-row space-x-1 lg:max-w-1/2 ">
                     { (tags === undefined) ? null :
                         ((tags.length >= 3) ? tags.slice(0,3).map((item) => {
                             return (<Tag 
