@@ -3,10 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import HeaderButton from "../headerbutton";
 import { Suspense } from "react";
+import Loading from "../loading";
 
 function Tag({tech}){
     return (
-        <h1 className="text-white bg-tag px-4 py-1 rounded-2xl text-xs">
+        <h1 className="text-superhighlight font-bold bg-hightlight/40 px-4 py-1 rounded-2xl text-xs">
             {tech}
         </h1>
     )
@@ -41,10 +42,10 @@ function ProjectCard({id, data}) {
                 group-hover:h-full group-hover:to-50% translate-all duration-500 ease-in-out flex flex-col space-y-0.5 lg:space-y-1 ">
                     
                 <div className="h-1/20 group-hover:h-1/2 transition-all duration-500 ease-in-out relative"/>
-                    <h1 className="w-19/20 text-xl truncate">
+                    <h2 className="w-19/20 text-xl truncate">
                         {id}
-                    </h1>
-                    <div className="left-9/10 top-1/10 absolute aspect-square -translate-x-1/2 group-hover:top-1/2 group-hover:-translate-y-1/2 
+                    </h2>
+                    <div className="left-9/10 top-1/10 absolute aspect-square -translate-x-1/2 group-hover:top-1/2 
                         transition-all duration-500 ease-in-out">
                         <Image 
                             className="w-full h-auto"
@@ -133,9 +134,9 @@ export default async function Projects() {
                 </div>
                 <Link className="lg:pl-34 pl-14 text-primary w-8/9 lg:w-1/2 mt-4 flex flex-row text-xl space-x-4 content-center h-6 "
                     href="/Contact"> 
-                    <h1 className="content-center">
+                    <h2 className="content-center">
                         CONTACT
-                    </h1>
+                    </h2>
                     <Image 
                         className="my-auto h-3/5 w-auto hidden dark:inline animate-bounceright"
                         width={1000} height={1000}
