@@ -2,11 +2,20 @@
 import Link from "next/link";
 import Image from "next/image";
 
+function Tag({tech}){
+    return (
+        <h1 className="text-superhighlight font-bold bg-hightlight/40 px-4 py-1 rounded-2xl text-xs">
+            {tech}
+        </h1>
+    )
+}
+
 export default function ExperienceCard({title, data}){
     const role = data.Role;
     const description = data.Description;
     const startDate = data.StartDate;
     const endDate = data.EndDate;
+    const tags = data.Tags
 
     function handleFocus() {
         const cards = document.getElementsByClassName("experience-card");
@@ -28,7 +37,7 @@ export default function ExperienceCard({title, data}){
     }
 
     return (
-        <Link className="w-full h-[33vh] hover:bg-linear-to-b from-background1 to-hightlight/20 rounded-2xl p-5 flex flex-col group space-y-2 
+        <Link className="w-full h-[30vh] lg:h-[25vh] hover:bg-linear-to-b from-background1 to-hightlight/20 rounded-2xl p-5 flex flex-col group space-y-2 
             transition-all duration-300 ease-in-out experience-card" 
             id={`Experience ${title}`}
             href={{
@@ -70,14 +79,33 @@ export default function ExperienceCard({title, data}){
             <h2 className="text-text2 text-lg ">
                 {role}
             </h2>
-            <div className="text-base line-clamp-5">
+            <div className="text-base line-clamp-4">
                 <h2 id="description" 
                     className="">
                     {description}
                 </h2>
             </div>
-            <h2 className="text-right mt-auto text-base text-text2 text-balanced">
-                {startDate} {(endDate === undefined || endDate === "") ? "" : "-" } {endDate}
+            <h2 className="mt-auto text-base text-text2 text-balanced flex flex-col lg:flex-row">
+                <div className="flex flex-row space-x-1 max-w-1/2">
+                    { (tags === undefined) ? null :
+                        ((tags.length >= 3) ? tags.slice(0,3).map((item) => {
+                            return (<Tag 
+                                        key={item}
+                                        tech={item}/>)
+                        }):
+                            tags.map((item) => {
+                                return(
+                                    <Tag 
+                                        key={item}
+                                        tech={item}/>
+                                );
+                            }))
+                        
+                    }
+                </div>
+                <div className="text-right w-full">
+                    {startDate} {(endDate === undefined || endDate === "") ? "" : "-" } {endDate}
+                </div>
             </h2>
         </Link>
     )
