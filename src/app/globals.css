@@ -11,6 +11,7 @@
   --background2dark: #141414;
   --background3dark: #282828;
   --color2: #9B5377;
+  --color3: #d88ab1;
   --textcolor2: #7e7e7e;
   --textcolor2dark: #ababab;
   --primary: black;
@@ -104,12 +105,13 @@
 }
 
 @theme {
-  --color-background1: var(--background1);
+  --color-background1: var(--color-background1);
   --color-background2: var(--background2);
   --color-background3: var(--background3);
   --color-primary: var(--primary);
   --color-text2: var(--textcolor2);
   --color-hightlight : var(--color2);
+  --color-superhighlight: var(--color3);
   --color-tag: var(--textcolor2);
   --color-alt: var(--textcolor2dark);
   --color-borderselect: var(--borderselect);
@@ -131,6 +133,9 @@
   --animate-pulldown: pulldown 1s ease-in-out forwards;
   --animate-goup: pulldown 1s ease-in-out backwards;
   
+}
+.background1{
+  background-image: linear-gradient(to bottom, var(--color-background1) 80%, var(--color-hightlight) 100%);
 }
 .dark{
   --color-background3: var(--background3dark);
