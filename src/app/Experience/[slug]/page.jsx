@@ -25,7 +25,7 @@ function Attachment({details}){
 
 function Technology ({tech}){
     return (
-        <h1 className="text-white bg-tag px-4 py-1  rounded-2xl text-xs2 xl:text-xs">
+        <h1 className="text-superhighlight bg-hightlight/40 px-4 py-1  rounded-2xl text-xs2 xl:text-xs">
             {tech}
         </h1>
     )
