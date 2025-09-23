@@ -308,7 +308,7 @@ const Header = () => {
 
             {/*Social external links */}
             <nav className="w-full h-1/10 lg:h-auto flex flex-row lg:flex-col space-y-3  lg:mx-0 ">
-                <a className="w-1/5 max-w-30 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
+                <a className="w-1/5 max-w-30 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1 mx-auto lg:mx-auto" 
                     href="https://docs.google.com/document/d/1nGHDpZ9HvGR8FkzPURvtzzub3NPhHUgyPH-FS1WBxu0/preview"
                     target="_blank"
                     id="HeaderResume">  
@@ -340,7 +340,7 @@ const Header = () => {
                             unoptimized/>
                     </div>
                 </a>
-                <a className=" w-1/5 max-w-30 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
+                <a className=" w-1/5 max-w-30 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1 mx-auto lg:mx-auto"
                     href="https://github.com/RileyWong26"
                     target="_blank">
                     <div className="w-full h-full group-hover:inline
@@ -371,7 +371,7 @@ const Header = () => {
                             unoptimized/>
                     </div>
                 </a>
-                <a className="w-1/5 max-w-30 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
+                <a className="w-1/5 max-w-30 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1 mx-auto lg:mx-auto"
                     href="//www.linkedin.com/in/riley-wong-1051b2250"
                     target="_blank">
                     <div className=" w-full h-full group-hover:inline hidden
@@ -399,7 +399,7 @@ const Header = () => {
                             unoptimized/>
                     </div>
                 </a>
-                <a className="w-1/5 max-w-30 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1"
+                <a className="w-1/5 max-w-30 lg:w-full lg:h-[20px] group cursor-pointer p-3 lg:p-0 z-1 mx-auto lg:mx-auto"
                     href="https://ryebread26.itch.io"
                     target="_blank">
                     <div className="m-auto w-full h-full hidden group-hover:inline
