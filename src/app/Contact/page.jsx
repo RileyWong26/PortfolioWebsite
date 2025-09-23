@@ -105,13 +105,13 @@ export default function Contact() {
                         Contact Me
                     </h1>
                     <div className="lg:h-[10vh] w-full text-xl text-primary flex flex-col lg:flex-row ">
-                        <p className="content-center">
+                        <div className="content-center">
                             I am always looking forward to connect or work on projects.  Get in touch here, or shoot me an email directly at&nbsp;
                             <a className="text-hightlight content-center"
                             href="mailto:rileywongwong@gmail.com">
                             rileywongwong@gmail.com
                             </a>
-                        </p>
+                        </div>
                         <a className="w-1/10 h-auto content-center"
                             href="//www.linkedin.com/in/riley-wong-1051b2250"
                             target="_blank">
