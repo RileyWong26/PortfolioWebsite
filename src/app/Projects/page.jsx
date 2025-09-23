@@ -20,7 +20,8 @@ function ProjectCard({id, data}) {
     const tags = data.Tags;
 
     return(
-        <Link className="bg-hightlight aspect-square text-white rounded-2xl content-end overflow-hidden group relative shadow-2xl"
+        <Link className="bg-hightlight aspect-square text-white rounded-2xl content-end overflow-hidden group relative shadow-2xl tracking-widest"
+            id={`Project ${id}`}
             href={
                 `/Projects/${id}`
             }>
@@ -54,11 +55,14 @@ function ProjectCard({id, data}) {
                             width={0} height={0}
                             quality={100}/>
                     </div>
-                <div className="w-full hidden lg:inline h-1/30 transition-all duration-500 ease-in-out text-transparent 
-                    xl:text-base group-hover:h-1/4 group-hover:text-alt text-ellipsis overflow-hidden">
-                    { (description === undefined) ? null :
-                        description
-                    }
+                <div className="w-full hidden lg:inline h-1/30 transition-all duration-500 ease-in-out text-transparent text-base
+                    xl:text-base group-hover:h-1/4 group-hover:text-alt">
+                    <h2 className="line-clamp-3">
+                        { 
+                            (description === undefined) ? null :
+                                description
+                        }
+                    </h2>
                 </div>
                 <div className="flex flex-row space-x-1 flex-wrap overflow-y-hidden">
                     { (tags === undefined) ? null :
@@ -119,7 +123,7 @@ export default async function Projects() {
             duration-1000 ease-in-out flex flex-row text-primary relative">
             <Header />
             <HeaderButton />
-            <div className="w-9/10 h-full flex flex-col animate-pullup space-y-4 mx-auto">
+            <div className="w-9/10 h-full flex flex-col animate-pullup space-y-4 mx-auto pb-5">
                 <h1 className="text-hightlight font-bold text-3xl h-[15vh] content-end w-9/10 ml-auto">
                     Projects
                 </h1>
