@@ -20,7 +20,7 @@ export default async function About(){
                         <div className="lg:ml-auto lg:mr-0 m-auto w-4/5 h-full flex flex-col space-y-8 lg:space-y-12 justify-center">
                             <h2 className="text-base leading-6">Hi! My name is Riley Wong, I am a developer passionate about creating robust software.  My favourite works lies in creating software that solves issues and facilitates use for its users.  My love for developing started from creating both mods and games at age 10.  </h2>
                             <h2 className="text-base leading-6">I am a team player who communicates effectively, faces problems critically and has the technical skills to tackle any problems.  </h2>
-                            <h2 className="text-base leading-6">In my spare time I like to listen to music, play guitar and sing.</h2>
+                            <h2 className="text-base leading-6">In my spare time you can find me climbing, playing guitar or playing Guilty Gear</h2>
                             <Link className="mt-10 text-primary w-4/5 flex flex-row text-xl space-x-4 content-center h-6"
                                 href="/Experience"> 
                                 <h2 className="content-center">
