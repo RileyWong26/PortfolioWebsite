@@ -1,6 +1,7 @@
 import Header from "@/app/header";
 import Image from "next/image";
 import HeaderButton from "@/app/headerbutton";
+import BackButton from "@/app/BackButton";
 
 function Attachment({details}){
     const video = details.Video;
@@ -25,7 +26,7 @@ function Attachment({details}){
 
 function Technology ({tech}){
     return (
-        <h1 className="text-superhighlight bg-hightlight/40 px-4 py-1  rounded-2xl text-xs2 xl:text-xs">
+        <h1 className="text-superhighlight2 bg-hightlight/40 px-4 py-1 font-bold rounded-2xl text-xs2 xl:text-xs tracking-widest">
             {tech}
         </h1>
     )
@@ -55,13 +56,14 @@ export default async function Page({params}){
     const attachments = data.ExtraAttachments;
     
     return(
-        <div className="bg-background1 min-h-screen relative flex flex-row">
+        <div className="bg-background1 min-h-screen relative flex flex-row ">
             <Header />
             <HeaderButton />
             <div id="ExperienceDetails"
                 className="w-4/5 lg:w-1/2 mx-auto mb-auto mt-5 space-y-6 flex flex-col animate-pullup">
+                
                 {/*Main image */}
-                <div className="h-[33vh] w-full content-center relative ">
+                <div className="min-h-[33vh] w-full content-center relative ">
                     {(image === undefined) ? null : 
                     <Image className="m-auto rounded-2xl w-full h-auto lg:h-full lg:w-auto"
                             alt="Image of work"
@@ -98,8 +100,8 @@ export default async function Page({params}){
                     }
                 </a>
                 {/* Added on details*/}
-                <div>
-                    <h1 className="text-primary font-bold text-lg">
+                <div className="">
+                    <h1 className="text-primary font-bold text-lg pb-5">
                         DATE
                     </h1>
                     <h1 className="text-base text-primary">
@@ -115,7 +117,7 @@ export default async function Page({params}){
                     </h1>
                 </div>
                 {/* Technology tags*/}
-                <div>
+                <div className="pb-5">
                     <h1 className="text-primary font-bold text-lg">
                         TECHNOLOGIES
                     </h1>
@@ -130,7 +132,7 @@ export default async function Page({params}){
                 </div>
                 {/* Check if there are any more attachments*/}
                 {(attachments === undefined) ? null : 
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 pb-5">
                         <h1 className="text-primary font-bold text-lg">
                             ATTACHMENTS
                         </h1> 
@@ -142,6 +144,10 @@ export default async function Page({params}){
                         })}
                     </div>
                 }
+                {/* back button */}
+                <div className="pb-5">
+                    <BackButton link={"/Experience"}/>
+                </div>
             </div>
         </div>
     )

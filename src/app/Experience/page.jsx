@@ -69,7 +69,7 @@ export default async function Experience({props}) {
             <section className="w-full flex flex-col animate-pullup space-y-6 py-4">
                 <div className="w-full flex flex-row ">
                     {/* Experiences */}
-                    <div className="w-4/5 flex flex-col space-y-6">
+                    <div className="w-4/5 flex flex-col space-y-6 pb-5">
                         <h1 className="h-[15vh] w-4/5 text-hightlight ml-auto 
                             bg-amber content-end font-bold text-3xl ">
                             Work Experience

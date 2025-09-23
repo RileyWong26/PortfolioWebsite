@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Tag({tech}){
     return (
-        <h1 className="text-superhighlight font-bold bg-hightlight/40 px-4 py-1 rounded-2xl text-xs tracking-widest ">
+        <h1 className="text-superhighlight2 font-bold bg-hightlight/40 px-4 py-1 rounded-2xl text-xs tracking-widest ">
             {tech}
         </h1>
     )
